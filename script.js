@@ -974,7 +974,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const password = loginPassword.value;
 
     // Validación de las dos cuentas
-    const esAdmin67 = email === "administrador67@gmail.com" && password === "chock000";
+    const esAdmin67 = email === "administrador67@gmail.com" && password === "chock2011";
     const esAdmin68 = email === "administrador68@gmail.com" && password === "chock123";
 
     if (esAdmin67 || esAdmin68) {
