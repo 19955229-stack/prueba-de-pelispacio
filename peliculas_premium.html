@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PelisPacio - Películas Premium</title>
+  <!-- Iconos de FontAwesome para barra de búsqueda y menú -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="hogar.css">
+</head>
+<body>
+<div class="app-container">
+    <!-- MENÚ LATERAL -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo-container">
+        <img src="caleb x chock.jpeg" alt="PelisPacio Logo" class="brand-logo">
+      </div>
+
+      <nav class="nav-menu">
+        <a href="hogar.html" class="nav-item"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="peliculas_premium.html" class="nav-item active"><i class="fa-solid fa-film"></i> Películas</a>
+        <a href="series.html" class="nav-item"><i class="fa-solid fa-tv"></i> Series</a>
+        <a href="animes.html" class="nav-item"><i class="fa-solid fa-dragon"></i> Animes</a>
+
+        <a href="proyecto.html" class="nav-item" id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
+      </nav>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+      <!-- HEADER CON BUSCADOR Y PERFIL -->
+      <header class="top-bar">
+        <div class="top-bar-left">
+          <button type="button" class="sidebar-toggle" id="sidebar-toggle" aria-label="Plegar menú" aria-expanded="true" aria-controls="sidebar">
+            <i class="fa-solid fa-angles-left"></i>
+          </button>
+          <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="buscador" placeholder="Buscar películas...">
+        </div>
+        </div>
+        <div class="user-profile">
+          <img src="fof.png" alt="Avatar" class="avatar">
+          <span>¡Hola, <strong id="username-display">Como estas</strong>!</span>
+        </div>
+      </header>
+
+      <div class="page-header">
+        <h2>Películas Premium <i class="fa-solid fa-crown"></i></h2>
+        <p>El catálogo exclusivo de tu cuenta, disponible en 4K y sin anuncios.</p>
+      </div>
+
+      <!-- CATEGORÍAS -->
+      <div class="categories-container">
+        <h3>Categorías</h3>
+        <div class="chips-wrapper">
+          <button class="chip active" data-filter="todas">Todas</button>
+          <button class="chip" data-filter="accion">Acción</button>
+          <button class="chip" data-filter="comedia">Comedia</button>
+          <button class="chip" data-filter="terror">Terror</button>
+          <button class="chip" data-filter="cienciaficcion">Ciencia ficción</button>
+          <button class="chip" data-filter="animacion">Animación</button>
+          <button class="chip" data-filter="drama">Drama</button>
+        </div>
+      </div>
+
+      <!-- CUADRÍCULA DE PELÍCULAS PREMIUM -->
+      <div class="movies-grid" id="movies-grid">
+        <div class="movie-card" data-title="interstellar" data-category="cienciaficcion drama" data-sinopsis="Un grupo de astronautas viaja a través de un agujero de gusano en busca de un nuevo hogar para la humanidad, mientras el tiempo corre distinto para cada uno de ellos." data-video="">
+          <img src="inter.jpg" alt="Interstellar" class="card-img">
+          <h4>INTERSTELLAR</h4>
+          <div class="series-meta">2014 · Ciencia ficción</div>
+          <div class="stars">★★★★★</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="angry birds" data-category="comedia animacion" data-sinopsis="Un pájaro huraño que vive en una isla feliz debe unir fuerzas con otras aves inadaptadas para descubrir la verdadera amenaza que se esconde tras la llegada de unos cerdos verdes." data-video="">
+          <img src="angry.jpg" alt="Angry Birds" class="card-img">
+          <h4>Angry Birds</h4>
+          <div class="series-meta">2016 · Comedia / Animación</div>
+          <div class="stars">★★★★★</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="spiderman into de spider verse" data-category="accion animacion" data-sinopsis="Un joven de Brooklyn descubre que es uno de los muchos Spider-Man del multiverso y debe aprender a usar sus poderes para enfrentar una amenaza que pone en peligro varias realidades." data-video="">
+          <img src="spider.jpeg" alt="Spider-Man" class="card-img">
+          <h4>Spider-Man: Across the Spider-Verse</h4>
+          <div class="series-meta">2023 · Acción / Animación</div>
+          <div class="stars">★★★★☆</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="la mascara" data-category="comedia" data-sinopsis="Un empleado bancario tímido encuentra una máscara mágica que libera su lado más alocado y le da poderes fuera de lo común, metiéndolo en toda clase de líos." data-video="">
+          <img src="mascara.jpg" alt="La Máscara" class="card-img">
+          <h4>La Máscara</h4>
+          <div class="series-meta">1994 · Comedia</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="actividad paranormal" data-category="terror" data-sinopsis="Una pareja instala cámaras en su casa para descubrir qué provoca los extraños sucesos que ocurren cada noche mientras duermen." data-video="">
+          <img src="actividad.jpg" alt="Actividad Paranormal" class="card-img">
+          <h4>Actividad Paranormal</h4>
+          <div class="series-meta">Terror</div>
+          <div class="stars">★★★★☆</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="toy story 2" data-category="animacion comedia" data-sinopsis="Woody es secuestrado por un coleccionista de juguetes y sus amigos emprenden una misión de rescate para traerlo de vuelta antes de que sea demasiado tarde." data-video="">
+          <img src="toy.jpg" alt="Toy Story 2" class="card-img">
+          <h4>Toy Story 2</h4>
+          <div class="series-meta">Animación / Comedia</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="los trolls" data-category="animacion comedia" data-sinopsis="Los Trolls, siempre felices y cantarines, deben rescatar a varios de los suyos del reino vecino de los Bergens, criaturas gigantes que solo son felices comiéndoselos." data-video="">
+          <img src="trolls.jpeg" alt="Los Trolls" class="card-img">
+          <h4>Los Trolls</h4>
+          <div class="series-meta">Animación / Comedia</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="mentiroso mentiroso" data-category="comedia" data-sinopsis="Un abogado que nunca dice la verdad se ve obligado, por el deseo de su hijo, a no poder mentir durante 24 horas justo cuando más lo necesita." data-video="">
+          <img src="mentiroso.jpg" alt="Mentiroso Mentiroso" class="card-img">
+          <h4>Mentiroso Mentiroso</h4>
+          <div class="series-meta">Comedia</div>
+          <div class="stars">★★★★☆</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="mi villano favorito 4" data-category="animacion comedia" data-sinopsis="Gru se convierte en padre de familia y debe enfrentar a un nuevo villano de su pasado, mientras sus minions provocan el caos de siempre." data-video="">
+          <img src="mi villano.jpg" alt="Mi Villano Favorito 4" class="card-img">
+          <h4>Mi Villano Favorito 4</h4>
+          <div class="series-meta">Animación / Comedia</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="minecraft" data-category="animacion comedia" data-sinopsis="Un grupo de personas es transportado al mundo cúbico de Minecraft, donde deberá aprender a sobrevivir, construir y enfrentar peligros para encontrar el camino de regreso a casa." data-video="">
+          <img src="mine.jpeg" alt="Minecraft" class="card-img">
+          <h4>Minecraft</h4>
+          <div class="series-meta">Animación / Comedia</div>
+          <div class="stars">★★★★☆</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="el extraño mundo de jack" data-category="animacion terror" data-sinopsis="Jack Skellington, el Rey de Halloween, descubre la Navidad y decide adueñarse de ella, con resultados tan entrañables como desastrosos." data-video="">
+          <img src="extraño.jpeg" alt="El extraño mundo de Jack" class="card-img">
+          <h4>El extraño mundo de Jack</h4>
+          <div class="series-meta">Animación / Terror</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="el cadaver de la novia" data-category="animacion terror" data-sinopsis="Un joven nervioso practica sus votos de matrimonio en el bosque y sin querer despierta a una novia cadáver que lo cree su prometido." data-video="">
+          <img src="cadaver.jpg" alt="El cadáver de la novia" class="card-img">
+          <h4>El cadáver de la novia</h4>
+          <div class="series-meta">Animación / Terror</div>
+          <div class="stars">★★★★☆</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <p id="sin-resultados" class="sin-resultados" style="display:none;">No se encontraron películas con ese filtro.</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>

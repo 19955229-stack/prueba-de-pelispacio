@@ -1,0 +1,265 @@
+/* ==========================================================
+   detalle.css - Estilos exclusivos de la página de detalle
+   (pelicula.html). Se usa junto con hogar.css, que ya trae
+   el sidebar, el top-bar y el resto del diseño de la app.
+   ========================================================== */
+
+.volver-peliculas {
+  display: inline-block;
+  margin: 0 0 18px;
+  color: #4b5563;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.volver-peliculas:hover {
+  color: #0e6ba8;
+}
+
+.detalle-pelicula {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.detalle-fondo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(30px) brightness(0.45);
+  transform: scale(1.15);
+  z-index: 0;
+}
+
+.detalle-contenido {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 48px 60px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.detalle-poster {
+  width: 260px;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+.detalle-info {
+  flex: 1 1 300px;
+  color: #ffffff;
+  padding-top: 10px;
+}
+
+.detalle-info h1 {
+  font-size: 2.6rem;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.detalle-subtitulo {
+  color: #b3b8c2;
+  font-style: italic;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.detalle-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.badge-pill {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge-hd {
+  background: #ffb800;
+  color: #000000;
+}
+
+.badge-imdb {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffcc33;
+}
+
+.detalle-descripcion {
+  color: #d7dae0;
+  line-height: 1.7;
+  margin-bottom: 26px;
+  max-width: 600px;
+  font-size: 1.05rem;
+}
+
+.detalle-generos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.detalle-generos span,
+.detalle-generos a {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e2e4e9;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.detalle-generos a:hover {
+  background: rgba(67, 97, 238, 0.5);
+  border-color: #4361ee;
+  transform: translateY(-2px);
+}
+
+.detalle-video-section {
+  background: #0d1117;
+  padding: 24px 32px;
+  margin-top: 24px;
+  border-radius: 14px;
+}
+
+.detalle-video-section h2 {
+  color: #ffffff;
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+}
+
+.servidores-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.servidor-tab {
+  background: rgba(255, 255, 255, 0.08);
+  color: #d7dae0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.servidor-tab.activo {
+  background: #0e6ba8;
+  color: #ffffff;
+  border-color: #0e6ba8;
+}
+
+.video-responsive {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  padding-top: 56.25%; /* Relación 16:9 */
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000000;
+}
+
+.video-responsive iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.episodios-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.episodio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #d7dae0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.episodio-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.episodio-btn.activo {
+  background: #0e6ba8;
+  border-color: #0e6ba8;
+  color: #ffffff;
+}
+
+.video-no-disponible {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #64748a;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.pie-pagina {
+  background-color: #0873a8;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  margin-top: 24px;
+  border-radius: 10px;
+}
+
+.pie-pagina p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .detalle-contenido {
+    justify-content: center;
+    text-align: center;
+    padding: 32px 24px;
+  }
+
+  .detalle-badges,
+  .detalle-generos {
+    justify-content: center;
+  }
+
+  .detalle-video-section {
+    padding: 20px;
+  }
+}

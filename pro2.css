@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa; /* Fondo claro de la interfaz */
+  color: #2b3a4a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 35px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(14, 107, 168, 0.12);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  border-top: 5px solid #ba25d5; /* Detalle superior morado */
+}
+
+header h1 {
+  color: #0e6ba8; /* Azul principal PelisPacio */
+  margin-bottom: 24px;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.form-box h2 {
+  color: #0b3c5d;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  color: #1a2b3c;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0e6ba8;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(14, 107, 168, 0.15);
+}
+
+button {
+  width: 100%;
+  padding: 13px;
+  background-color: #ba25d5; /* Morado del botón de la imagen */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #9c1eb5;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+p {
+  margin-top: 18px;
+  font-size: 0.95rem;
+  color: #627d98;
+}
+
+a {
+  color: #0e6ba8;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid #ba25d5;
+}
+
+a:hover {
+  color: #ba25d5;
+}
+
+.btn-logout {
+  background-color: #0e6ba8;
+  margin-top: 20px;
+}
+
+.btn-logout:hover {
+  background-color: #0b5485;
+}
+
+.hidden {
+  display: none;
+}
+
+.message {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+a {
+  color: #0e6ba8;
+  font-weight: 600;
+  text-decoration: none; /* Elimina el subrayado por defecto */
+  border-bottom: none;   /* Asegura que no haya líneas inferiores */
+}
+
+a:hover {
+  color: #ba25d5;
+  text-decoration: none; /* Asegura que tampoco aparezca subrayado al pasar el cursor */
+}
+
+/* Estilo para que el enlace dentro del botón ocupe todo el espacio y conserve el texto blanco */
+button a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+button a:hover {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}

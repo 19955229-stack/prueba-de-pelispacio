@@ -1,0 +1,782 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #2b3a4a;
+  min-height: 100vh;
+}
+
+/* ESTRUCTURA PRINCIPAL CON FLEXBOX (Inicio / Películas / Series / Animes) */
+.app-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+/* SIDEBAR LATERAL CON FLEXBOX */
+.sidebar {
+  width: 260px;
+  background-color: #ffffff;
+  border-right: 1px solid #e1e8ed;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 5px;
+}
+
+.brand-logo {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+#logout-btn {
+  margin-top: auto;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  color: #627d98;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+  background-color: #0e6ba8;
+  color: #ffffff;
+}
+
+.nav-divider {
+  border: none;
+  border-top: 1px solid #e1e8ed;
+  margin: 15px 0;
+}
+
+/* CONTENIDO PRINCIPAL CON FLEXBOX */
+.main-content {
+  flex: 1;
+  padding: 25px 35px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* BARRA SUPERIOR (dentro del sidebar-layout) */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* ==========================================================
+   SOLO PARA LA FICHA DE DETALLE (pelicula.html): en vez de
+   sidebar, usa una barra horizontal arriba tipo proyecto.html
+   ========================================================== */
+.d-app {
+  min-height: 100vh;
+}
+
+.d-topnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e1e8ed;
+  padding: 14px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.d-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.d-logo-img {
+  max-height: 95px;
+  width: auto;
+  object-fit: contain;
+}
+
+.d-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.d-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  color: #627d98;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.d-nav-item:hover, .d-nav-item.active {
+  background-color: #0e6ba8;
+  color: #ffffff;
+}
+
+.d-main {
+  padding: 25px 35px;
+}
+
+@media (max-width: 900px) {
+  .d-topnav {
+    justify-content: center;
+  }
+  .d-topnav .search-box {
+    order: 3;
+    width: 100%;
+  }
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #f5f7fa;
+  border: 1px solid #e1e8ed;
+  padding: 10px 16px;
+  border-radius: 20px;
+  width: 260px;
+  gap: 10px;
+  color: #0e6ba8;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  color: #1a2b3c;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #0b3c5d;
+}
+
+.username-editable {
+  cursor: pointer;
+  border-bottom: 1px dashed #0e6ba8;
+}
+
+.username-editable:hover {
+  color: #0e6ba8;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #0e6ba8;
+}
+
+/* BANNER DE PELÍCULA */
+.hero-banner {
+  position: relative;
+  min-height: 280px;
+  border-radius: 16px;
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 35px;
+  overflow: hidden;
+}
+
+.hero-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-content h1 {
+  font-size: 2.4rem;
+  margin: 10px 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+
+.badge {
+  background-color: #0e6ba8;
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rating {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stars {
+  color: #ffc107;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  background-color: #0e6ba8;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #0b5485;
+}
+
+.btn-secondary {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* SECCIONES Y TARJETAS CON FLEXBOX */
+.movies-section {
+  margin-bottom: 35px;
+}
+
+.movies-section h3 {
+  color: #0b3c5d;
+  margin-bottom: 18px;
+  font-size: 1.3rem;
+}
+
+.movies-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.movie-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid #e1e8ed;
+  transition: transform 0.2s, box-shadow 0.2s;
+  flex: 1 1 180px;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(14, 107, 168, 0.2);
+  border-color: #0e6ba8;
+}
+
+.card-img {
+  width: 100%;
+  height: 220px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.movie-card h4 {
+  font-size: 0.95rem;
+  color: #0b3c5d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 5px;
+}
+
+.movie-card .stars {
+  margin-bottom: 12px;
+}
+
+.series-meta {
+  font-size: 0.8rem;
+  color: #627d98;
+  margin-bottom: 6px;
+}
+
+/* BOTÓN "VER AHORA" DE LAS TARJETAS */
+.btn-watch {
+  margin-top: auto;
+  background-color: #0e6ba8;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-watch:hover {
+  background-color: #0b5485;
+}
+
+/* ===== ENCABEZADO DE SECCIÓN CON "VER TODAS" ===== */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.section-header h3 {
+  margin-bottom: 0;
+}
+
+.ver-todas {
+  color: #0e6ba8;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.ver-todas:hover {
+  text-decoration: underline;
+}
+
+/* ===== ENCABEZADO DE PÁGINA (Series / Animes) ===== */
+.page-header {
+  margin-bottom: 25px;
+}
+
+.page-header h2 {
+  color: #0b3c5d;
+  font-size: 1.7rem;
+  margin-bottom: 6px;
+}
+
+.page-header p {
+  color: #627d98;
+}
+
+/* ===== CATEGORÍAS / CHIPS DE FILTRO ===== */
+.categories-container {
+  margin-bottom: 30px;
+}
+
+.categories-container h3 {
+  color: #0b3c5d;
+  margin-bottom: 14px;
+  font-size: 1.1rem;
+}
+
+.chips-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  background: #ffffff;
+  border: 1px solid #e1e8ed;
+  color: #0b3c5d;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chip:hover {
+  border-color: #0e6ba8;
+}
+
+.chip.active {
+  background: #0e6ba8;
+  color: #ffffff;
+  border-color: #0e6ba8;
+}
+
+.btn-add {
+  background: #0b3c5d;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ===== CUADRÍCULA DE CATÁLOGO (Series / Animes) ===== */
+.movies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.movies-grid .movie-card {
+  flex: 1 1 200px;
+  width: auto;
+  max-width: 240px;
+}
+
+/* ===== FICHA DESPLEGABLE: SINOPSIS + VIDEO (tema oscuro tipo "detalle de película") ===== */
+@keyframes desplegar {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.movie-card.tarjeta-activa {
+  border-color: #0e6ba8;
+  box-shadow: 0 8px 15px rgba(14, 107, 168, 0.25);
+}
+
+.detalle-expandible {
+  /* Ocupa toda la fila tanto en grid (catálogos) como en flex-wrap (inicio) */
+  grid-column: 1 / -1;
+  flex: 1 1 100%;
+  width: 100%;
+
+  position: relative;
+  background: linear-gradient(180deg, #101823, #0a1119);
+  border: 1px solid #1c2b3a;
+  border-radius: 14px;
+  padding: 24px;
+  animation: desplegar 0.25s ease;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+.detalle-cerrar {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #cbd5e1;
+  cursor: pointer;
+}
+
+.detalle-cerrar:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.detalle-expandible-contenido {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.detalle-expandible-poster {
+  width: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.detalle-expandible-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.detalle-expandible-info h3 {
+  color: #ffffff;
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+
+.detalle-expandible-subtitulo {
+  color: #93a5b8;
+  font-style: italic;
+  margin-bottom: 14px;
+}
+
+.detalle-expandible-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.badge-pill {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.badge-pill.badge-calidad {
+  background: #f5a623;
+  color: #1a1a1a;
+}
+
+.badge-pill.badge-imdb {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.detalle-expandible-sinopsis {
+  color: #c3ccd6;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.detalle-expandible-generos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.badge-genero {
+  background: transparent;
+  border: 1px solid #33475c;
+  color: #9fb3c8;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.detalle-expandible-reproducir h4 {
+  color: #ffffff;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.servidor-actual {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid #263548;
+  color: #cbd5e1;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.servidor-actual i {
+  color: #0e6ba8;
+}
+
+.detalle-expandible-video {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 16 / 9;
+  background: #05090d;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.detalle-expandible-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-no-disponible {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #64748a;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 10px;
+}
+
+@media (max-width: 560px) {
+  .detalle-expandible-contenido {
+    flex-direction: column;
+  }
+  .detalle-expandible-poster {
+    width: 100%;
+    max-height: 260px;
+  }
+}
+
+.sin-resultados {
+  flex: 1 1 100%;
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #627d98;
+  padding: 40px 0;
+  font-size: 1.05rem;
+}
+
+
+/* ==========================================================
+   MENÚ LATERAL PLEGABLE (hogar, series, animes, películas)
+   Se pliega hacia la IZQUIERDA. El contenido (flex: 1) ocupa
+   el espacio que deja libre el menú.
+   ========================================================== */
+.sidebar {
+  flex: 0 0 260px;
+  margin-left: 0;
+  z-index: 30;
+  transition: margin-left 0.3s ease, visibility 0s linear 0s;
+}
+
+.app-container.menu-plegado .sidebar {
+  margin-left: -260px;
+  visibility: hidden;
+  /* visibility cambia al final, cuando ya terminó de deslizarse */
+  transition: margin-left 0.3s ease, visibility 0s linear 0.3s;
+}
+
+/* evita la animación al cargar la página */
+.app-container.sin-anim .sidebar {
+  transition: none;
+}
+
+.top-bar {
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.sidebar-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  background-color: #ffffff;
+  color: #0e6ba8;
+  border: 1px solid #e1e8ed;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-toggle:hover {
+  background-color: #0e6ba8;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  /* En móvil el menú se superpone al contenido */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    box-shadow: 4px 0 18px rgba(0, 0, 0, 0.15);
+  }
+
+  .main-content {
+    padding: 20px 16px;
+  }
+
+  .search-box {
+    width: 100%;
+    max-width: 260px;
+  }
+}

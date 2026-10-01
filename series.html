@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PelisPacio - Series</title>
+  <!-- Iconos de FontAwesome para barra de búsqueda y menú -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="hogar.css">
+</head>
+<body>
+<div class="app-container">
+    <!-- MENÚ LATERAL -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo-container">
+        <img src="caleb x chock.jpeg" alt="PelisPacio Logo" class="brand-logo">
+      </div>
+
+      <nav class="nav-menu">
+        <a href="hogar.html" class="nav-item"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="peliculas_premium.html" class="nav-item"><i class="fa-solid fa-film"></i> Películas</a>
+        <a href="series.html" class="nav-item active"><i class="fa-solid fa-tv"></i> Series</a>
+        <a href="animes.html" class="nav-item"><i class="fa-solid fa-dragon"></i> Animes</a>
+
+        <a href="proyecto.html" class="nav-item" id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
+      </nav>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+      <!-- HEADER CON BUSCADOR Y PERFIL -->
+      <header class="top-bar">
+        <div class="top-bar-left">
+          <button type="button" class="sidebar-toggle" id="sidebar-toggle" aria-label="Plegar menú" aria-expanded="true" aria-controls="sidebar">
+            <i class="fa-solid fa-angles-left"></i>
+          </button>
+          <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="buscador" placeholder="Buscar series...">
+        </div>
+        </div>
+        <div class="user-profile">
+          <img src="fof.png" alt="Avatar" class="avatar">
+          <span>¡Hola, <strong id="username-display">Como estas</strong>!</span>
+        </div>
+      </header>
+
+      <div class="page-header">
+        <h2>Series <i class="fa-solid fa-tv"></i></h2>
+        <p>Todas las temporadas de tus series favoritas en un solo lugar.</p>
+      </div>
+
+      <!-- CATEGORÍAS -->
+      <div class="categories-container">
+        <h3>Categorías</h3>
+        <div class="chips-wrapper">
+          <button class="chip active" data-filter="todas">Todas</button>
+          <button class="chip" data-filter="drama">Drama</button>
+          <button class="chip" data-filter="comedia">Comedia</button>
+          <button class="chip" data-filter="terror">Terror</button>
+          <button class="chip" data-filter="cienciaficcion">Ciencia ficción</button>
+          <button class="chip" data-filter="crimen">Crimen</button>
+          <button class="chip" data-filter="fantasia">Fantasía</button>
+        </div>
+      </div>
+
+      <!-- CUADRÍCULA DE SERIES -->
+      <div class="movies-grid" id="movies-grid">
+        <div class="movie-card" data-title="stranger things" data-category="cienciaficcion terror" data-sinopsis="Un grupo de amigos se enfrenta a fuerzas sobrenaturales y experimentos secretos que ponen en peligro a todo su pueblo." data-video="">
+          <img src="juego-calamar.jpeg" alt="Stranger Things" class="card-img">
+          <h4>El juego del calamar</h4>
+          <div class="series-meta">2 Temporadas · </div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="la casa de papel" data-category="crimen drama" data-sinopsis="Un grupo de atracadores liderado por 'El Profesor' planea el golpe más ambicioso de la historia: entrar a la Fábrica Nacional de Moneda y Timbre sin que nadie salga herido." data-video="">
+          <img src="casa-papel.jpeg" alt="La Casa de Papel" class="card-img">
+          <h4>La Casa de Papel</h4>
+          <div class="series-meta">5 Temporadas · Crimen</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="breaking bad" data-category="crimen drama" data-sinopsis="La vida diaria de una familia y sus vecinos en un pueblo donde el humor absurdo es la norma de cada episodio." data-video="">
+          <img src="simpson.jpeg" alt="Breaking Bad" class="card-img">
+          <h4>Los simpsons</h4>
+          <div class="series-meta">5 Temporadas · Drama</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="wednesday" data-category="comedia terror" data-sinopsis="Un gato naranja perezoso y glotón vive las aventuras cotidianas junto a su dueño, siempre buscando lasaña y evitando los lunes." data-video="">
+          <img src="garfield.jpeg" alt="Garfield" class="card-img">
+          <h4>Garfield</h4>
+          <div class="series-meta">2 Temporadas · Comedia </div>
+          <div class="stars">★★★★☆</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="the office" data-category="comedia" data-sinopsis="Dos hermanos gemelos exploran junto a su tío abuelo un pueblo lleno de misterios sobrenaturales durante un verano inolvidable." data-video="">
+          <img src="falls.jpeg" alt="Gravity Falls" class="card-img">
+          <h4>Gravity Falls</h4>
+          <div class="series-meta">2 Temporadas · Comedia</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="juego de tronos" data-category="fantasia drama" data-sinopsis="Varias familias nobles luchan por el control del Trono de Hierro mientras una amenaza antigua se acerca desde más allá del muro." data-video="">
+          <img src="escobar.jpg" alt="Pablo Escobar" class="card-img">
+          <h4>Pablo Escobar</h4>
+          <div class="series-meta"> 50 Episodios · Fantasía</div>
+          <div class="stars">★★★★☆</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <p id="sin-resultados" class="sin-resultados" style="display:none;">No se encontraron series con ese filtro.</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PeliSpacio</title>
+  <!-- Iconos de FontAwesome para barra de búsqueda y menú -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="hogar.css">
+  <link rel="stylesheet" href="detalle.css">
+</head>
+<body>
+<div class="d-app">
+    <!-- BARRA SUPERIOR: LOGO + MENÚ + BUSCADOR + PERFIL (solo en la ficha de detalle) -->
+    <header class="d-topnav">
+      <div class="d-logo">
+        <img src="caleb x chock.jpeg" alt="PelisPacio Logo" class="d-logo-img">
+      </div>
+
+      <nav class="d-nav">
+        <a href="hogar.html" class="d-nav-item"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="peliculas_premium.html" class="d-nav-item"><i class="fa-solid fa-film"></i> Películas</a>
+        <a href="series.html" class="d-nav-item"><i class="fa-solid fa-tv"></i> Series</a>
+        <a href="animes.html" class="d-nav-item"><i class="fa-solid fa-dragon"></i> Animes</a>
+      </nav>
+
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="buscador" placeholder="Buscar películas, series...">
+      </div>
+      <div class="user-profile">
+        <img src="fof.png" alt="Avatar" class="avatar">
+        <span>¡Hola, <strong id="username-display">Como estas</strong>!</span>
+      </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="d-main">
+      <a href="peliculas_premium.html" class="volver-peliculas">‹ Volver a Películas</a>
+
+      <!-- Información de la película -->
+      <section class="detalle-pelicula">
+        <div class="detalle-fondo" id="detalle-fondo"></div>
+
+        <div class="detalle-contenido">
+          <img id="detalle-poster" class="detalle-poster" src="" alt="Póster">
+
+          <div class="detalle-info">
+            <h1 id="detalle-titulo">Título</h1>
+            <p id="detalle-subtitulo" class="detalle-subtitulo">Título original</p>
+
+            <div class="detalle-badges">
+              <span class="badge-pill badge-hd" id="detalle-badge-calidad">HD</span>
+              <span class="badge-pill" id="detalle-badge-anio">2026</span>
+              <span class="badge-pill" id="detalle-badge-duracion">0h 0m</span>
+              <span class="badge-pill badge-imdb">⭐ <span id="detalle-badge-imdb">0.0</span></span>
+            </div>
+
+            <p id="detalle-descripcion" class="detalle-descripcion">Descripción</p>
+
+            <div class="detalle-generos" id="detalle-generos"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tráiler, más abajo en la misma página -->
+      <section class="detalle-video-section">
+        <h2>Reproducir</h2>
+        <div class="servidores-tabs" id="servidores-tabs">
+          <span class="servidor-tab activo"><i class="fa-solid fa-server"></i> Servidor: Mega</span>
+        </div>
+        <div class="episodios-lista" id="episodios-lista"></div>
+        <div class="video-responsive" id="video-responsive"></div>
+      </section>
+
+      <footer class="pie-pagina">
+        <p>PeliSpacio • Tu espacio de cine digital • &copy; 2026</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

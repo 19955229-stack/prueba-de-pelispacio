@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PelisPacio - Animes</title>
+  <!-- Iconos de FontAwesome para barra de búsqueda y menú -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="hogar.css">
+</head>
+<body>
+<div class="app-container">
+    <!-- MENÚ LATERAL -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo-container">
+        <img src="caleb x chock.jpeg" alt="PelisPacio Logo" class="brand-logo">
+      </div>
+
+      <nav class="nav-menu">
+        <a href="hogar.html" class="nav-item"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="peliculas_premium.html" class="nav-item"><i class="fa-solid fa-film"></i> Películas</a>
+        <a href="series.html" class="nav-item"><i class="fa-solid fa-tv"></i> Series</a>
+        <a href="animes.html" class="nav-item active"><i class="fa-solid fa-dragon"></i> Animes</a>
+
+        <a href="proyecto.html" class="nav-item" id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
+      </nav>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+      <!-- HEADER CON BUSCADOR Y PERFIL -->
+      <header class="top-bar">
+        <div class="top-bar-left">
+          <button type="button" class="sidebar-toggle" id="sidebar-toggle" aria-label="Plegar menú" aria-expanded="true" aria-controls="sidebar">
+            <i class="fa-solid fa-angles-left"></i>
+          </button>
+          <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="buscador" placeholder="Buscar animes...">
+        </div>
+        </div>
+        <div class="user-profile">
+          <img src="fof.png" alt="Avatar" class="avatar">
+          <span>¡Hola, <strong id="username-display">Como estas</strong>!</span>
+        </div>
+      </header>
+
+      <div class="page-header">
+        <h2>Animes <i class="fa-solid fa-dragon"></i></h2>
+        <p>Los animes más populares, en un solo lugar.</p>
+      </div>
+
+      <!-- CATEGORÍAS -->
+      <div class="categories-container">
+        <h3>Categorías</h3>
+        <div class="chips-wrapper">
+          <button class="chip active" data-filter="todas">Todas</button>
+          <button class="chip" data-filter="shonen">Shonen</button>
+          <button class="chip" data-filter="seinen">Seinen</button>
+          <button class="chip" data-filter="accion">Acción</button>
+          <button class="chip" data-filter="comedia">Comedia</button>
+          <button class="chip" data-filter="romance">Romance</button>
+          <button class="btn-add">+</button>
+        </div>
+      </div>
+
+      <!-- CUADRÍCULA DE ANIMES -->
+      <div class="movies-grid" id="movies-grid">
+        <div class="movie-card" data-title="bleach" data-category="shonen accion" data-sinopsis="Un joven obtiene los poderes de una shinigami y asume la tarea de guiar a los espíritus errantes y enfrentar a los peligrosos hollows." data-video="">
+          <img src="bleach.jpg" alt="Bleach" class="card-img">
+          <h4>Bleach</h4>
+          <div class="series-meta">100 Episodios · Shonen</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="dragon ball z" data-category="shonen accion" data-sinopsis="Goku y sus amigos defienden la Tierra de guerreros cada vez más poderosos mientras persiguen las legendarias esferas del dragón." data-video="">
+          <img src="dragon-ball.jpg" alt="Dragon Ball Z" class="card-img">
+          <h4>Dragon Ball Z</h4>
+          <div class="series-meta"> 174 Episodios · Acción</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="demon slayer" data-category="shonen accion" data-sinopsis="Tras la masacre de su familia, un joven se convierte en cazador de demonios para vengarse y encontrar una cura para su hermana convertida en demonio." data-video="">
+          <img src="demon-slayer.jpg" alt="Demon Slayer" class="card-img">
+          <h4>Demon Slayer</h4>
+          <div class="series-meta">4 Temporadas · Shonen</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="one piece" data-category="shonen accion" data-sinopsis="Un joven pirata de cuerpo elástico reúne una tripulación para encontrar el mayor tesoro del mundo y convertirse en el Rey de los Piratas." data-video="">
+          <img src="anime.jpg" alt="Takopi's Original Sin" class="card-img">
+          <h4>Takopi's Original Sin</h4>
+          <div class="series-meta">16 Episodios · Tragedia / Ciencia Ficción</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="inuyasha" data-category="seinen" data-sinopsis="Una joven viaja al pasado feudal de Japón y, junto a un hanyō de carácter fuerte, busca los fragmentos de una joya con poderes mágicos." data-video="">
+          <img src="inuyasha.jpeg" alt="Inuyasha" class="card-img">
+          <h4>Inuyasha</h4>
+          <div class="series-meta">1 Temporada · Seinen / Suspenso</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div class="movie-card" data-title="evangelion" data-category="mecha" data-sinopsis="Un adolescente es reclutado para pilotar un robot gigante y defender a la humanidad de misteriosas criaturas conocidas como Ángeles." data-video="">
+          <img src="Evangelion.jpg" alt="Neon Genesis Evangelion" class="card-img">
+          <h4>Neon Genesis Evangelion</h4>
+          <div class="series-meta">1 Temporada · Mecha / Suspenso</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <p id="sin-resultados" class="sin-resultados" style="display:none;">No se encontraron animes con ese filtro.</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>

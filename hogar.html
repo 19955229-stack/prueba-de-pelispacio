@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PelisPacio - Catálogo</title>
+  <!-- Iconos de FontAwesome para barra de búsqueda y menú -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="hogar.css">
+</head>
+<body>
+<div class="app-container">
+    <!-- MENÚ LATERAL -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo-container">
+        <img src="caleb x chock.jpeg" alt="PelisPacio Logo" class="brand-logo">
+      </div>
+
+      <nav class="nav-menu">
+        <a href="hogar.html" class="nav-item active"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="peliculas_premium.html" class="nav-item"><i class="fa-solid fa-film"></i> Películas</a>
+        <a href="series.html" class="nav-item"><i class="fa-solid fa-tv"></i> Series</a>
+        <a href="animes.html" class="nav-item"><i class="fa-solid fa-dragon"></i> Animes</a>
+
+        <a href="proyecto.html" class="nav-item" id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
+      </nav>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+      <!-- HEADER CON BUSCADOR Y PERFIL -->
+      <header class="top-bar">
+        <div class="top-bar-left">
+          <button type="button" class="sidebar-toggle" id="sidebar-toggle" aria-label="Plegar menú" aria-expanded="true" aria-controls="sidebar">
+            <i class="fa-solid fa-angles-left"></i>
+          </button>
+          <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="search-input" placeholder="Buscar películas, series...">
+        </div>
+        </div>
+        <div class="user-profile">
+          <img src="fof.png" alt="Avatar" class="avatar">
+          <span>¡Hola, <strong id="username-display">Como estas</strong>!</span>
+        </div>
+      </header>
+
+      <!-- BANNER DESTACADO COYOTE VS ACME -->
+      <section class="hero-banner">
+        <img src="coyote.jpeg" alt="Coyote vs ACME" class="hero-bg-img">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <span class="badge">Estreno Exclusivo</span>
+          <h1>Coyote vs. ACME</h1>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="score">4.9</span>
+          </div>
+          <div class="hero-buttons">
+            <a href="pelicula.html?clave=coyote%20vs%20acme&titulo=Coyote%20vs.%20ACME&poster=coyote.jpeg" class="btn-primary"><i class="fa-solid fa-play"></i> Reproducir</a>
+            <a href="pelicula.html?clave=coyote%20vs%20acme&titulo=Coyote%20vs.%20ACME&poster=coyote.jpeg" class="btn-secondary"><i class="fa-solid fa-circle-info"></i> Más Info</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 1: TENDENCIAS GLOBALES -->
+      <section class="movies-section">
+        <h3>Tendencias Globales</h3>
+        <div class="movies-flex-container">
+          <div class="movie-card" data-title="interstellar">
+            <img src="inter.jpg" alt="Película 1" class="card-img">
+            <h4>INTERSTELLAR</h4>
+            <div class="stars">★★★★★</div>
+              <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="movie-card" data-title="angry birds">
+            <img src="angry.jpg" alt="Película 2" class="card-img">
+            <h4>Angry Birds</h4>
+            <div class="stars">★★★★★</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="movie-card" data-title="spiderman into de spider verse">
+            <img src="spider.jpeg" alt="Película 3" class="card-img">
+            <h4>spiderman into de spider verse</h4>
+            <div class="stars">★★★★☆</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="movie-card" data-title="la mascara">
+            <img src="mascara.jpg" alt="Película 4" class="card-img">
+            <h4>La mascara</h4>
+            <div class="stars">★★★★★</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 2: AÑADIDAS RECIENTEMENTE -->
+      <section class="movies-section">
+        <h3>Añadidas Recientemente</h3>
+        <div class="movies-flex-container">
+          <div class="movie-card" data-title="actividad paranormal">
+            <img src="actividad.jpg" alt="Película 5" class="card-img">
+            <h4>Actividad Para normal</h4>
+            <div class="stars">★★★★☆</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="movie-card" data-title="toy story 2">
+            <img src="toy.jpg" alt="Película 6" class="card-img">
+            <h4>toy story 2</h4>
+            <div class="stars">★★★★★</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="movie-card" data-title="los trolls">
+            <img src="trolls.jpeg" alt="Película 7" class="card-img">
+            <h4>Los Trolls</h4>
+            <div class="stars">★★★★★</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="movie-card" data-title="mentiroso mentiroso">
+            <img src="mentiroso.jpg" alt="Película 8" class="card-img">
+            <h4>Mentiroso Mentiroso</h4>
+            <div class="stars">★★★★☆</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 3: RECOMENDADAS PARA TI -->
+      <section class="movies-section">
+        <h3>Recomendadas para Ti</h3>
+        <div class="movies-flex-container">
+          <div class="movie-card" data-title="mi villano favorito 4">
+            <img src="mi villano.jpg" alt="Película 9" class="card-img">
+            <h4>Mi villano Favorito 4</h4>
+            <div class="stars">★★★★★</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="movie-card" data-title="minecraft">
+            <img src="mine.jpeg" alt="Película 10" class="card-img">
+            <h4>Minecraft</h4>
+            <div class="stars">★★★★☆</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="movie-card" data-title="el extraño mundo de jack">
+            <img src="extraño.jpeg" alt="Película 11" class="card-img">
+            <h4>El extraño mundo de Jack</h4>
+            <div class="stars">★★★★★</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="movie-card" data-title="el cadaver de la novia">
+            <img src="cadaver.jpg" alt="Película 12" class="card-img">
+            <h4>El cadáver de la novia</h4>
+            <div class="stars">★★★★☆</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 4: SERIES DESTACADAS -->
+      <section class="movies-section" id="series">
+        <div class="section-header">
+          <h3>Series Destacadas</h3>
+          <a href="series.html" class="ver-todas">Ver todas →</a>
+        </div>
+        <div class="movies-flex-container">
+          <div class="movie-card" data-title="stranger things">
+            <img src="juego-calamar.jpeg" alt="EL Juego del Calamar" class="card-img">
+            <h4>EL Juego del Calamar</h4>
+            <div class="series-meta">4 Temporadas · Ciencia ficción</div>
+            <div class="stars">★★★★★</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="movie-card" data-title="la casa de papel">
+            <img src="casa-papel.jpeg" alt="La Casa de Papel" class="card-img">
+            <h4>La Casa de Papel</h4>
+            <div class="series-meta">5 Temporadas · Crimen</div>
+            <div class="stars">★★★★★</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="movie-card" data-title="breaking bad">
+            <img src="simpson.jpeg" alt="Los simpsons" class="card-img">
+            <h4>Los simpsons</h4>
+            <div class="series-meta">5 Temporadas · Drama</div>
+            <div class="stars">★★★★★</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="movie-card" data-title="juego de tronos">
+            <img src="juego-tronos.jpg" alt="Juego de Tronos" class="card-img">
+            <h4>Juego de Tronos</h4>
+            <div class="series-meta">8 Temporadas · Fantasía</div>
+            <div class="stars">★★★★☆</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 5: ANIMES DESTACADOS -->
+      <section class="movies-section" id="animes">
+        <div class="section-header">
+          <h3>Animes Destacados</h3>
+          <a href="animes.html" class="ver-todas">Ver todas →</a>
+        </div>
+        <div class="movies-flex-container">
+          <div class="movie-card" data-title="dragon ball z">
+            <img src="dragon-ball.jpg" alt="Dragon Ball Z" class="card-img">
+            <h4>Dragon Ball Z</h4>
+            <div class="series-meta">220 Episodios · Shonen</div>
+            <div class="stars">★★★★★</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="movie-card" data-title="evangelion">
+            <img src="Evangelion.jpg" alt="Evangelion" class="card-img">
+            <h4>Neon Genesis Evangelion</h4>
+            <div class="series-meta">1 Temporada · Acción</div>
+            <div class="stars">★★★★★</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="movie-card" data-title="demon slayer">
+            <img src="demon-slayer.jpg" alt="Demon Slayer" class="card-img">
+            <h4>Demon Slayer</h4>
+            <div class="series-meta">4 Temporadas · Shonen</div>
+            <div class="stars">★★★★★</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="movie-card" data-title="bleach">
+            <img src="bleach.jpg" alt="Bleach" class="card-img">
+            <h4>Bleach</h4>
+            <div class="series-meta">2 Temporadas · Shonen</div>
+            <div class="stars">★★★★★</div>
+            <button class="btn-watch" onclick="irADetallePelicula(this)">Ver ahora <i class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>

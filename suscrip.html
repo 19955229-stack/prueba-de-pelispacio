@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PelisPacio - Suscripción</title>
+  <link rel="stylesheet" href="pro4.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="centered-layout">
+
+  <!-- CABECERA FLEXBOX CON TEXTO BRANDING CENTRADO -->
+  <header class="top-header-centered">
+    <a href="proyecto.html" class="brand-title-link">
+      <h1 class="brand-title"><span class="brand-peli">Peli</span><span class="brand-spacio">Spacio</span></h1>
+    </a>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL FLEXBOX -->
+  <main class="main-content">
+    <section class="checkout-container">
+      <div class="form-title-header">
+        <h2>Completa tu Registro y Suscripción</h2>
+      </div>
+
+      <form id="subscription-form" class="subscription-form">
+        
+        <!-- PASO 1: DATOS DE LA CUENTA -->
+        <div class="form-section">
+          <h3 class="section-title"><i class="fa-solid fa-user"></i> 1. Datos de la Cuenta</h3>
+          <div class="form-flex-group">
+            <div class="form-group flex-half">
+              <label for="email">Correo Electrónico</label>
+              <input type="email" id="email" placeholder="ejemplo@correo.com" required>
+            </div>
+            <div class="form-group flex-half">
+              <label for="username">Nombre de Usuario</label>
+              <input type="text" id="username" placeholder="Tu usuario" required>
+            </div>
+            <div class="form-group flex-full">
+              <label for="dob">Fecha de Nacimiento</label>
+              <input type="date" id="dob" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- PASO 2: SELECCIÓN DE PLAN (FLEXBOX) -->
+        <div class="form-section">
+          <h3 class="section-title"><i class="fa-solid fa-layer-group"></i> 2. Selecciona tu Plan</h3>
+          <div class="plans-flex-container">
+            
+            <!-- PLAN BÁSICO -->
+            <label class="plan-option plan-basic">
+              <input type="radio" name="plan" value="basico" required>
+              <div class="plan-box">
+                <span class="plan-header-title">Básico</span>
+                <div class="plan-price">$4.99<span>/mes</span></div>
+                <ul class="plan-mini-features">
+                  <li>2 dispositivos</li>
+                  <li>Catálogo completo</li>
+                  <li>Sin anuncios en HD</li>
+                  <li>Velocidad de descarga 30MB</li>
+                </ul>
+              </div>
+            </label>
+
+            <!-- PLAN ESTÁNDAR (MÁS POPULAR) -->
+            <label class="plan-option plan-standard">
+              <input type="radio" name="plan" value="estandar" checked required>
+              <div class="plan-box">
+                <span class="badge-popular">MÁS POPULAR</span>
+                <span class="plan-header-title">Estándar</span>
+                <div class="plan-price">$8.99<span>/mes</span></div>
+                <ul class="plan-mini-features">
+                  <li>Full HD • 6 dispositivos</li>
+                  <li>Descargas offline más veloces</li>
+                  <li>Perfiles familiares</li>
+                </ul>
+              </div>
+            </label>
+
+            <!-- PLAN PREMIUM -->
+            <label class="plan-option plan-premium">
+              <input type="radio" name="plan" value="premium" required>
+              <div class="plan-box">
+                <span class="plan-header-title">Premium</span>
+                <div class="plan-price">$12.99<span>/mes</span></div>
+                <ul class="plan-mini-features">
+                  <li>4K HDR • 10 dispositivos</li>
+                  <li>Beneficios de planes anteriores</li>
+                  <li>Acceso anticipado a estrenos</li>
+                </ul>
+              </div>
+            </label>
+
+          </div>
+        </div>
+
+        <!-- PASO 3: DETALLES DE PAGO -->
+        <div class="form-section">
+          <h3 class="section-title"><i class="fa-solid fa-credit-card"></i> 3. Tarjeta de Crédito</h3>
+          <div class="form-flex-group">
+            <div class="form-group flex-full">
+              <label for="card-name">Nombre en la Tarjeta</label>
+              <input type="text" id="card-name" placeholder="Como aparece en la tarjeta" required>
+            </div>
+            <div class="form-group flex-full">
+              <label for="card-number">Número de Tarjeta</label>
+              <div class="input-with-icon">
+                <input type="text" id="card-number" maxlength="19" placeholder="0000 0000 0000 0000" required>
+                <i class="fa-solid fa-lock"></i>
+              </div>
+            </div>
+            <div class="form-group flex-half">
+              <label for="card-expiry">Vencimiento (MM/AA)</label>
+              <input type="text" id="card-expiry" placeholder="MM/AA" maxlength="5" required>
+            </div>
+            <div class="form-group flex-half">
+              <label for="card-cvv">Código CVV</label>
+              <input type="password" id="card-cvv" placeholder="123" maxlength="4" required>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit-subscription">
+          <i class="fa-solid fa-check-circle"></i> Confirmar y Suscribirme
+        </button>
+
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
