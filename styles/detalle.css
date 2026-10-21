@@ -1,0 +1,501 @@
+/* ==========================================================
+   detalle.css - Estilos exclusivos de la página de detalle
+   (pelicula.html). Se usa junto con hogar.css, que ya trae
+   el sidebar, el top-bar y el resto del diseño de la app.
+   ========================================================== */
+
+.volver-peliculas {
+  display: inline-block;
+  margin: 0 0 18px;
+  color: #4b5563;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.volver-peliculas:hover {
+  color: #0e6ba8;
+}
+
+.detalle-pelicula {
+  background: linear-gradient(135deg, #0d1117, #1f2937);
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.detalle-fondo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(30px) brightness(0.45);
+  transform: scale(1.15);
+  z-index: 0;
+}
+
+.detalle-contenido {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 48px 60px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.detalle-poster {
+  width: 260px;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+.detalle-info {
+  flex: 1 1 300px;
+  color: #ffffff;
+  padding-top: 10px;
+}
+
+.detalle-info h1 {
+  font-size: 2.6rem;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.detalle-subtitulo {
+  color: #b3b8c2;
+  font-style: italic;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.detalle-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.badge-pill {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge-hd {
+  background: #ffb800;
+  color: #000000;
+}
+
+.badge-imdb {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffcc33;
+}
+
+.detalle-descripcion {
+  color: #d7dae0;
+  line-height: 1.7;
+  margin-bottom: 26px;
+  max-width: 600px;
+  font-size: 1.05rem;
+}
+
+.detalle-generos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.detalle-generos span,
+.detalle-generos a {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e2e4e9;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.detalle-generos a:hover {
+  background: rgba(67, 97, 238, 0.5);
+  border-color: #4361ee;
+  transform: translateY(-2px);
+}
+
+.detalle-video-section {
+  background: #0d1117;
+  padding: 24px 32px;
+  margin-top: 24px;
+  border-radius: 14px;
+}
+
+.detalle-video-section h2 {
+  color: #ffffff;
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+}
+
+.servidores-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.servidor-tab {
+  background: rgba(255, 255, 255, 0.08);
+  color: #d7dae0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.servidor-tab.activo {
+  background: #0e6ba8;
+  color: #ffffff;
+  border-color: #0e6ba8;
+}
+
+.video-responsive {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  padding-top: 56.25%; /* Relación 16:9 */
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000000;
+}
+
+.video-responsive iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.episodios-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.episodio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #d7dae0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.episodio-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.episodio-btn.activo {
+  background: #0e6ba8;
+  border-color: #0e6ba8;
+  color: #ffffff;
+}
+
+.video-no-disponible {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #64748a;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.pie-pagina {
+  background-color: #0873a8;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  margin-top: 24px;
+  border-radius: 10px;
+}
+
+.pie-pagina p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .detalle-contenido {
+    justify-content: center;
+    text-align: center;
+    padding: 32px 24px;
+  }
+
+  .detalle-badges,
+  .detalle-generos {
+    justify-content: center;
+  }
+
+  .detalle-video-section {
+    padding: 20px;
+  }
+}
+
+/* ==========================================================
+   BARRA SUPERIOR + VISTA TELÉFONO (ficha de detalle)
+   ========================================================== */
+
+/* Computadora: logo | secciones | perfil, igual que antes */
+.d-logo { order: 0; }
+.d-menu-panel { display: contents; }
+.d-menu-panel .d-nav { order: 1; }
+.d-topnav > .user-profile { order: 2; }
+.d-menu-btn { display: none; }
+
+/* Computadora: las secciones van pegadas al logo y el perfil queda a la derecha */
+@media (min-width: 901px) {
+  .d-topnav {
+    justify-content: flex-start;
+    gap: 28px;
+  }
+  .d-topnav > .user-profile {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .d-topnav {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+  }
+
+  .d-logo { order: 0; }
+  .d-logo-img { max-height: 48px; }
+
+  /* Perfil en el centro de la barra */
+  .d-topnav > .user-profile {
+    order: 1;
+    flex: 1 1 0;
+    min-width: 0;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.9rem;
+  }
+  .d-topnav > .user-profile span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .d-topnav > .user-profile .avatar { width: 34px; height: 34px; flex-shrink: 0; }
+
+  /* Botón animado: tres barras que se vuelven una X */
+  .d-menu-btn {
+    order: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    background: #0e6ba8;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(14, 107, 168, 0.35);
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+                background-color 0.25s ease, border-radius 0.35s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .d-menu-btn:active { transform: scale(0.88); }
+  .d-topnav.menu-abierto .d-menu-btn {
+    background: #0b3c5d;
+    border-radius: 50%;
+    transform: rotate(180deg);
+  }
+  .d-topnav.menu-abierto .d-menu-btn:active { transform: rotate(180deg) scale(0.88); }
+
+  .d-menu-barras {
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 16px;
+  }
+  .d-menu-barras i {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+                opacity 0.2s ease, top 0.3s ease, width 0.3s ease;
+  }
+  .d-menu-barras i:nth-child(1) { top: 0; }
+  .d-menu-barras i:nth-child(2) { top: 6.75px; }
+  .d-menu-barras i:nth-child(3) { top: 13.5px; }
+  .d-topnav.menu-abierto .d-menu-barras i:nth-child(1) { top: 6.75px; transform: rotate(45deg); }
+  .d-topnav.menu-abierto .d-menu-barras i:nth-child(2) { opacity: 0; width: 0; }
+  .d-topnav.menu-abierto .d-menu-barras i:nth-child(3) { top: 6.75px; transform: rotate(-45deg); }
+
+  /* Panel de secciones: se desliza hacia abajo */
+  .d-menu-panel {
+    order: 3;
+    display: grid;
+    grid-template-rows: 0fr;
+    width: 100%;
+    visibility: hidden;
+    transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.4s;
+  }
+  .d-topnav.menu-abierto .d-menu-panel {
+    grid-template-rows: 1fr;
+    visibility: visible;
+    transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s;
+  }
+
+  .d-menu-panel .d-nav {
+    order: 0;
+    min-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 4px;
+  }
+
+  .d-menu-panel .d-nav-item {
+    padding: 13px 14px;
+    font-size: 1rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.35s ease, background-color 0.2s ease, color 0.2s ease;
+  }
+  .d-topnav.menu-abierto .d-nav-item { opacity: 1; transform: none; }
+  .d-topnav.menu-abierto .d-nav-item:nth-child(1) { transition-delay: 0.08s; }
+  .d-topnav.menu-abierto .d-nav-item:nth-child(2) { transition-delay: 0.14s; }
+  .d-topnav.menu-abierto .d-nav-item:nth-child(3) { transition-delay: 0.20s; }
+  .d-topnav.menu-abierto .d-nav-item:nth-child(4) { transition-delay: 0.26s; }
+
+  /* Línea separadora y aire solo cuando está abierto */
+  .d-topnav.menu-abierto .d-menu-panel .d-nav { padding: 8px 0 6px; border-top: 1px solid #e1e8ed; margin-top: 4px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .d-menu-btn, .d-menu-barras i, .d-menu-panel, .d-menu-panel .d-nav-item { transition: none !important; }
+}
+
+@media (max-width: 768px) {
+  .d-main { padding: 14px 12px 90px; }
+
+  .detalle-pelicula { min-height: 0; }
+
+  .detalle-contenido {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 24px 16px;
+  }
+
+  .detalle-poster {
+    width: min(58%, 220px);
+    height: auto;
+  }
+
+  .detalle-info {
+    flex: 0 0 auto;
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .detalle-info h1 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  .detalle-subtitulo {
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+  }
+
+  .detalle-badges { margin-bottom: 16px; gap: 8px; }
+  .badge-pill { padding: 4px 12px; font-size: 0.8rem; }
+
+  .detalle-descripcion {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: left;
+    max-width: none;
+    margin-bottom: 18px;
+  }
+
+  .detalle-generos { gap: 8px; }
+  .detalle-generos span,
+  .detalle-generos a { padding: 5px 14px; font-size: 0.8rem; }
+
+  .detalle-video-section {
+    padding: 16px 14px;
+    margin-top: 16px;
+  }
+
+  .detalle-video-section h2 { font-size: 1.2rem; margin-bottom: 12px; }
+
+  .servidor-tab { padding: 8px 14px; font-size: 0.85rem; }
+
+  .episodios-lista { gap: 8px; }
+  .episodio-btn { padding: 10px 14px; font-size: 0.85rem; }
+
+  .pie-pagina { margin-top: 16px; padding: 12px 10px; }
+  .pie-pagina p { font-size: 13px; }
+}
+
+@media (max-width: 380px) {
+  .detalle-info h1 { font-size: 1.4rem; }
+  .d-topnav { gap: 8px; padding: 8px 10px; }
+  .d-logo-img { max-height: 40px; }
+  .d-topnav > .user-profile { font-size: 0.8rem; gap: 6px; }
+  .d-topnav > .user-profile .avatar { width: 30px; height: 30px; }
+  .d-menu-btn { width: 42px; height: 42px; }
+}
+
+/* Cartel que reemplaza al póster cuando la imagen no existe */
+.detalle-poster-respaldo {
+  aspect-ratio: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(160deg, #1e3a8a, #6d28d9);
+}
+.detalle-poster-respaldo span { font-size: 3rem; line-height: 1; }
+.detalle-poster-respaldo strong { font-size: 1.1rem; line-height: 1.3; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45); }
