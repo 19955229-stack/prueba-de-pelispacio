@@ -1,0 +1,3160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeliSpacio</title>
+    <link rel="stylesheet" href="../styles/pro.css">
+</head>
+<body>
+  <div class="menu-principal" id="menu-principal">
+  <header class="her">
+  <div class="logo-container">
+    <img src="../images/parte-1/logo-pelispacio.jpeg" alt="PeliSpacio Logo" class="logo">
+    <div class="logo-text">
+    </div>
+  </div>
+
+  <nav class="nan">
+    <a href="../index.html" class="inss">Inicio</a>
+    <a href="peliculas.html" class="ine">Peliculas</a>
+    <a href="planes.html" class="in">Planes</a>
+    <a href="nosotros.html" class="in">Nosotros</a>
+    <a href="contacto.html" class="inn">Contacto</a>
+  </nav>
+   <a href="usuario.html"> <img src="../images/parte-1/icono-usuario-cabecera.png" class="usuario"></a>
+  </header>
+  <button type="button" class="menu-toggle-arriba" id="menu-toggle-arriba" aria-expanded="true">
+    <span class="flecha">▲</span>
+    <span class="menu-toggle-texto">Ocultar menú</span>
+  </button>
+</div>
+  <div class="hero-container">
+  <div class="hero-content">
+    <div class="title-wrapper">
+      <h1>Películas</h1>
+      <span class="icon">🎬</span>
+    </div>
+    <p class="description">Explora miles de historias y disfruta de tus películas favoritas.</p>
+    
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="buscador" placeholder="Buscar películas...">
+    </div>
+  </div>
+
+  <div class="hero-banner">
+    <img src="../images/parte-1/banner-peliculas.jpeg" alt="Banner Películas">
+  </div>
+</div>
+
+<div class="categories-container">
+  <h2>Categorías</h2>
+  <div class="chips-wrapper">
+    <button class="chip active" data-filter="todas"> Todas</button>
+    <button class="chip" data-filter="accion">Acción</button>
+    <button class="chip" data-filter="comedia"> Comedia</button>
+    <button class="chip" data-filter="terror"> terror</button>
+    <button class="chip" data-filter="romance">Romance</button>
+    <button class="chip" data-filter="cienciaficcion">Ciencia ficción</button>
+    <button class="chip" data-filter="animacion">Animación</button>
+    <button class="chip" data-filter="drama">Drama</button>
+  </div>
+</div>
+
+<!-- Sección de Cuadrícula de Películas -->
+<div class="movies-section">
+  <div class="movies-grid" id="movies-grid">
+    
+    <!-- Tarjeta 1 -->
+    <div class="movie-card"
+      data-title="interstellar" data-category="cienciaficcion drama"
+      data-subtitulo="Interstellar" data-anio="2014" data-duracion="2h 49m" data-imdb="8.7"
+      data-generos="Ciencia Ficción, Drama, Aventura"
+      data-descripcion="Un grupo de astronautas viaja a través de un agujero de gusano en busca de un nuevo hogar para la humanidad, mientras el tiempo corre distinto para quienes se quedan en la Tierra."
+      data-vimeo="1223801492">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-interstellar.jpg" alt="Película 1">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Interestelar</h3>
+        <p class="genre">Ciencia Ficción • 2014</p>
+        <div class="rating">⭐ 8.7</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="movie-card"
+      data-title="spiderman into de spider verse" data-category="accion animacion"
+      data-subtitulo="Spider-Man: Across the Spider-Verse" data-anio="2023" data-duracion="2h 20m" data-imdb="8.6"
+      data-generos="Animación, Acción, Aventura"
+      data-descripcion="Miles Morales viaja por un multiverso de arañas junto a Gwen Stacy, enfrentando a un nuevo villano y descubriendo lo que realmente significa ser Spider-Man."
+      data-vimeo="1223801493">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-spider-man-across-the-spider-verse.jpeg" alt="Película 2">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Spider-Man: Across the Spider-Verse</h3>
+        <p class="genre">Animación / Acción • 2023</p>
+        <div class="rating">⭐ 8.6</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="movie-card"
+      data-title="super mario bros la pelicula" data-category="animacion aventura comedia"
+      data-subtitulo="Super Mario Bros. La Película" data-anio="2023" data-duracion="1h 32m" data-imdb="7.0"
+      data-generos="Animación, Aventura, Comedia"
+      data-descripcion="Mario y Luigi, dos hermanos fontaneros de Brooklyn, llegan a un mundo mágico a través de una tubería misteriosa. Mario se une a la princesa Peach y a Toad para detener a Bowser, que planea conquistar el Reino Champiñón."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-super-mario-bros-la-pelicula.jpg" alt="Película 3">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Super Mario Bros.: La Película</h3>
+        <p class="genre">Animación / Aventura • 2023</p>
+        <div class="rating">⭐ 7.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 4 -->
+    <div class="movie-card"
+      data-title="angry birds" data-category="comedia animacion"
+      data-subtitulo="The Angry Birds Movie" data-anio="2016" data-duracion="1h 37m" data-imdb="6.3"
+      data-generos="Animación, Aventura, Comedia, Familia"
+      data-descripcion="En una isla de pájaros felices que no vuelan, Red y sus amigos Chuck y Bomb, siempre vistos como raros, son los únicos que sospechan de unos misteriosos cerdos verdes que llegan de visita."
+      data-vimeo="1223801494">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-angry-birds-la-pelicula.jpg" alt="Película 4">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>angry birds la pelicula</h3>
+        <p class="genre">Comedia / Animación • 2021</p>
+        <div class="rating">⭐ 9.5</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 5 -->
+    <div class="movie-card"
+      data-title="minecraft" data-category="animacion comedia"
+      data-subtitulo="A Minecraft Movie" data-anio="2025" data-duracion="1h 41m" data-imdb="6.0"
+      data-generos="Aventura, Comedia, Fantasía"
+      data-descripcion="Un grupo de personas es transportado al mundo cúbico de Minecraft, donde deberá aprender a sobrevivir, construir y enfrentar peligros para encontrar el camino de regreso a casa."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-minecraft-la-pelicula.jpeg" alt="Minecraft">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Minecraft</h3>
+        <p class="genre">Aventura / Comedia • 2025</p>
+        <div class="rating">⭐ 6.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 6 -->
+    <div class="movie-card"
+      data-title="los trolls" data-category="animacion comedia"
+      data-subtitulo="Trolls" data-anio="2016" data-duracion="1h 32m" data-imdb="6.4"
+      data-generos="Animación, Comedia, Musical"
+      data-descripcion="Los Trolls, siempre felices y cantarines, deben rescatar a varios de los suyos del reino vecino de los Bergens, criaturas gigantes que solo son felices comiéndoselos."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-los-trolls.jpeg" alt="Los Trolls">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Los Trolls</h3>
+        <p class="genre">Animación / Comedia • 2016</p>
+        <div class="rating">⭐ 6.4</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 7 -->
+    <div class="movie-card"
+      data-title="mi villano favorito 4" data-category="animacion comedia"
+      data-subtitulo="Despicable Me 4" data-anio="2024" data-duracion="1h 34m" data-imdb="6.1"
+      data-generos="Animación, Comedia"
+      data-descripcion="Gru se convierte en padre de familia y debe enfrentar a un nuevo villano de su pasado, mientras sus minions provocan el caos de siempre."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-mi-villano-favorito-4.jpg" alt="Mi Villano Favorito 4">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Mi Villano Favorito 4</h3>
+        <p class="genre">Animación / Comedia • 2024</p>
+        <div class="rating">⭐ 6.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 8 -->
+    <div class="movie-card"
+      data-title="la mascara" data-category="comedia"
+      data-subtitulo="The Mask" data-anio="1994" data-duracion="1h 41m" data-imdb="6.9"
+      data-generos="Comedia, Fantasía"
+      data-descripcion="Un empleado bancario tímido encuentra una máscara mágica que libera su lado más alocado y le da poderes fuera de lo común, metiéndolo en toda clase de líos."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-la-mascara.jpg" alt="La Máscara">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>La Máscara</h3>
+        <p class="genre">Comedia / Fantasía • 1994</p>
+        <div class="rating">⭐ 6.9</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 9 -->
+    <div class="movie-card"
+      data-title="actividad paranormal" data-category="terror"
+      data-subtitulo="Paranormal Activity" data-anio="2007" data-duracion="1h 26m" data-imdb="6.3"
+      data-generos="Terror"
+      data-descripcion="Una pareja instala cámaras en su casa para descubrir qué provoca los extraños sucesos que ocurren cada noche mientras duermen."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-actividad-paranormal.jpg" alt="Actividad Paranormal">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Actividad Paranormal</h3>
+        <p class="genre">Terror • 2007</p>
+        <div class="rating">⭐ 6.3</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 10 -->
+    <div class="movie-card"
+      data-title="spiderman brand new day" data-category="accion cienciaficcion"
+      data-subtitulo="Spider-Man: Brand New Day" data-anio="2026" data-duracion="2h 25m" data-imdb="8.1"
+      data-generos="Acción, Aventura, Ciencia ficción"
+      data-descripcion="Cuatro años después de Sin camino a casa, Peter Parker es un adulto que vive solo, tras borrarse voluntariamente de la vida y los recuerdos de quienes ama. Combate el crimen a tiempo completo en una Nueva York que ya no conoce su nombre, pero la presión provoca una transformación física que amenaza su existencia, mientras una extraña ola de crímenes da origen a una de las amenazas más poderosas que ha enfrentado."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-spider-man-brand-new-day.jpg" alt="Spider-Man: Brand New Day">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Spider-Man: Brand New Day</h3>
+        <p class="genre">Acción / Aventura • 2026</p>
+        <div class="rating">⭐ 8.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 11 -->
+    <div class="movie-card"
+      data-title="space jam" data-category="comedia deporte fantasia"
+      data-subtitulo="Space Jam: El juego del siglo" data-anio="1996" data-duracion="1h 32m" data-imdb="6.8"
+      data-generos="Comedia, Deporte, Fantasía"
+      data-descripcion="Michael Jordan se une a un grupo de conejos para jugar un juego de baloncesto contra los aliens."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-space-jam-el-juego-del-siglo.jpg" alt="Space Jam: El juego del siglo">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Space Jam: El juego del siglo</h3>
+        <p class="genre">Comedia / Deporte • 1996</p>
+        <div class="rating">⭐ 6.8</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 12 -->
+    <div class="movie-card"
+      data-title="mentiroso mentiroso" data-category="comedia"
+      data-subtitulo="Liar Liar" data-anio="1997" data-duracion="1h 27m" data-imdb="6.7"
+      data-generos="Comedia"
+      data-descripcion="Un abogado que nunca dice la verdad se ve obligado, por el deseo de su hijo, a no poder mentir durante 24 horas justo cuando más lo necesita."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-mentiroso-mentiroso.jpg" alt="Mentiroso Mentiroso">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Mentiroso Mentiroso</h3>
+        <p class="genre">Comedia • 1997</p>
+        <div class="rating">⭐ 6.7</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 13 -->
+    <div class="movie-card"
+      data-title="el extraño mundo de jack" data-category="animacion terror"
+      data-subtitulo="The Nightmare Before Christmas" data-anio="1993" data-duracion="1h 16m" data-imdb="8.0"
+      data-generos="Animación, Fantasía, Musical"
+      data-descripcion="Jack Skellington, el Rey de Halloween, descubre la Navidad y decide adueñarse de ella, con resultados tan entrañables como desastrosos."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-extrano-mundo-de-jack.jpeg" alt="El extraño mundo de Jack">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>El extraño mundo de Jack</h3>
+        <p class="genre">Animación / Fantasía • 1993</p>
+        <div class="rating">⭐ 8.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 14 -->
+    <div class="movie-card"
+      data-title="el cadaver de la novia" data-category="animacion terror romance"
+      data-subtitulo="Corpse Bride" data-anio="2005" data-duracion="1h 17m" data-imdb="7.3"
+      data-generos="Animación, Fantasía, Romance"
+      data-descripcion="Un joven nervioso practica sus votos de matrimonio en el bosque y sin querer despierta a una novia cadáver que lo cree su prometido."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-cadaver-de-la-novia.jpg" alt="El cadáver de la novia">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>El cadáver de la novia</h3>
+        <p class="genre">Animación / Fantasía • 2005</p>
+        <div class="rating">⭐ 7.3</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 15 -->
+    <div class="movie-card"
+      data-title="mad max furia en el camino" data-category="accion"
+      data-subtitulo="Mad Max: Fury Road" data-anio="2015" data-duracion="2h 0m" data-imdb="8.1"
+      data-generos="Acción, Aventura, Ciencia Ficción"
+      data-descripcion="En un desierto postapocalíptico, una guerrera y un fugitivo escapan de un tirano a bordo de un camión blindado, perseguidos por todo un ejército."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-mad-max-furia-en-el-camino.jpg" alt="Mad Max: Furia en el camino">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Mad Max: Furia en el camino</h3>
+        <p class="genre">Acción / Aventura • 2015</p>
+        <div class="rating">⭐ 8.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 16 -->
+    <div class="movie-card"
+      data-title="john wick" data-category="accion"
+      data-subtitulo="John Wick" data-anio="2014" data-duracion="1h 41m" data-imdb="7.4"
+      data-generos="Acción, Suspenso"
+      data-descripcion="Un asesino retirado vuelve a su antiguo mundo para vengarse de quienes le arrebataron lo último que le quedaba de su pasado."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-john-wick.jpg" alt="John Wick">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>John Wick</h3>
+        <p class="genre">Acción / Suspenso • 2014</p>
+        <div class="rating">⭐ 7.4</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 17 -->
+    <div class="movie-card"
+      data-title="gladiador" data-category="accion"
+      data-subtitulo="Gladiator" data-anio="2000" data-duracion="2h 35m" data-imdb="8.5"
+      data-generos="Acción, Drama, Aventura"
+      data-descripcion="Un general romano traicionado y esclavizado se convierte en gladiador y busca vengar a su familia frente al emperador que lo destruyó."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-gladiador.jpg" alt="Gladiador">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Gladiador</h3>
+        <p class="genre">Acción / Drama • 2000</p>
+        <div class="rating">⭐ 8.5</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 18 -->
+    <div class="movie-card"
+      data-title="duro de matar" data-category="accion"
+      data-subtitulo="Die Hard" data-anio="1988" data-duracion="2h 12m" data-imdb="8.2"
+      data-generos="Acción, Suspenso"
+      data-descripcion="Un policía de Nueva York queda atrapado en un rascacielos tomado por terroristas la noche de Navidad y debe detenerlos él solo."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-duro-de-matar.jpg" alt="Duro de matar">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Duro de matar</h3>
+        <p class="genre">Acción / Suspenso • 1988</p>
+        <div class="rating">⭐ 8.2</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 19 -->
+    <div class="movie-card"
+      data-title="misión imposible repercusión" data-category="accion"
+      data-subtitulo="Mission: Impossible - Fallout" data-anio="2018" data-duracion="2h 28m" data-imdb="7.7"
+      data-generos="Acción, Aventura, Suspenso"
+      data-descripcion="Ethan Hunt y su equipo corren contra el tiempo para evitar una catástrofe tras una misión que salió mal."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-mision-imposible-repercusion.jpg" alt="Misión Imposible: Repercusión">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Misión Imposible: Repercusión</h3>
+        <p class="genre">Acción / Aventura • 2018</p>
+        <div class="rating">⭐ 7.7</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 20 -->
+    <div class="movie-card"
+      data-title="top gun maverick" data-category="accion"
+      data-subtitulo="Top Gun: Maverick" data-anio="2022" data-duracion="2h 10m" data-imdb="8.2"
+      data-generos="Acción, Drama"
+      data-descripcion="Tras más de treinta años de servicio, Maverick entrena a una nueva generación de pilotos para una misión casi imposible."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-top-gun-maverick.jpg" alt="Top Gun: Maverick">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Top Gun: Maverick</h3>
+        <p class="genre">Acción / Drama • 2022</p>
+        <div class="rating">⭐ 8.2</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 21 -->
+    <div class="movie-card"
+      data-title="el caballero de la noche" data-category="accion"
+      data-subtitulo="The Dark Knight" data-anio="2008" data-duracion="2h 32m" data-imdb="9.0"
+      data-generos="Acción, Crimen, Drama"
+      data-descripcion="Batman se enfrenta al Joker, un criminal caótico que lleva a Ciudad Gótica al límite y pone a prueba todo en lo que cree."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-caballero-de-la-noche.png" alt="El caballero de la noche">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>El caballero de la noche</h3>
+        <p class="genre">Acción / Crimen • 2008</p>
+        <div class="rating">⭐ 9.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 22 -->
+    <div class="movie-card"
+      data-title="casino royale" data-category="accion"
+      data-subtitulo="Casino Royale" data-anio="2006" data-duracion="2h 24m" data-imdb="8.0"
+      data-generos="Acción, Aventura, Suspenso"
+      data-descripcion="En su primera misión como agente 007, James Bond debe derrotar a un banquero de terroristas en una partida de póker de alto riesgo."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-casino-royale.jpg" alt="Casino Royale">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Casino Royale</h3>
+        <p class="genre">Acción / Aventura • 2006</p>
+        <div class="rating">⭐ 8.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 23 -->
+    <div class="movie-card"
+      data-title="terminator 2 el juicio final" data-category="accion cienciaficcion"
+      data-subtitulo="Terminator 2: Judgment Day" data-anio="1991" data-duracion="2h 17m" data-imdb="8.6"
+      data-generos="Acción, Ciencia Ficción"
+      data-descripcion="Un cyborg viaja al pasado para proteger a un niño que será clave en el futuro, mientras otra máquina aún más letal lo persigue."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-terminator-2-el-juicio-final.jpg" alt="Terminator 2: El juicio final">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Terminator 2: El juicio final</h3>
+        <p class="genre">Acción / Ciencia Ficción • 1991</p>
+        <div class="rating">⭐ 8.6</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 24 -->
+    <div class="movie-card"
+      data-title="rápidos y furiosos 5" data-category="accion"
+      data-subtitulo="Fast Five" data-anio="2011" data-duracion="2h 10m" data-imdb="7.3"
+      data-generos="Acción, Crimen"
+      data-descripcion="Dominic y su equipo planean un último gran golpe en Río de Janeiro mientras un agente federal les pisa los talones."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-rapidos-y-furiosos-5.jpg" alt="Rápidos y furiosos 5">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Rápidos y furiosos 5</h3>
+        <p class="genre">Acción / Crimen • 2011</p>
+        <div class="rating">⭐ 7.3</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 25 -->
+    <div class="movie-card"
+      data-title="indiana jones en busca del arca perdida" data-category="accion"
+      data-subtitulo="Raiders of the Lost Ark" data-anio="1981" data-duracion="1h 55m" data-imdb="8.4"
+      data-generos="Acción, Aventura"
+      data-descripcion="El arqueólogo Indiana Jones compite contra los nazis por encontrar el Arca de la Alianza antes de que su poder caiga en malas manos."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-indiana-jones-en-busca-del-arca-perdida.jpg" alt="Indiana Jones: En busca del arca perdida">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Indiana Jones: En busca del arca perdida</h3>
+        <p class="genre">Acción / Aventura • 1981</p>
+        <div class="rating">⭐ 8.4</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 26 -->
+    <div class="movie-card"
+      data-title="kill bill volumen 1" data-category="accion"
+      data-subtitulo="Kill Bill: Vol. 1" data-anio="2003" data-duracion="1h 51m" data-imdb="8.2"
+      data-generos="Acción, Crimen"
+      data-descripcion="Una asesina despierta de un coma años después de ser traicionada y emprende una venganza contra quienes intentaron matarla."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-kill-bill-volumen-1.jpg" alt="Kill Bill: Volumen 1">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Kill Bill: Volumen 1</h3>
+        <p class="genre">Acción / Crimen • 2003</p>
+        <div class="rating">⭐ 8.2</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 27 -->
+    <div class="movie-card"
+      data-title="máxima velocidad" data-category="accion"
+      data-subtitulo="Speed" data-anio="1994" data-duracion="1h 56m" data-imdb="7.3"
+      data-generos="Acción, Suspenso"
+      data-descripcion="Un policía debe evitar que un autobús explote: si baja de cierta velocidad, la bomba que lleva a bordo estallará."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-maxima-velocidad.jpg" alt="Máxima velocidad">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Máxima velocidad</h3>
+        <p class="genre">Acción / Suspenso • 1994</p>
+        <div class="rating">⭐ 7.3</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 28 -->
+    <div class="movie-card"
+      data-title="pantera negra" data-category="accion"
+      data-subtitulo="Black Panther" data-anio="2018" data-duracion="2h 14m" data-imdb="7.3"
+      data-generos="Acción, Aventura"
+      data-descripcion="T'Challa regresa a Wakanda como nuevo rey, pero un viejo enemigo amenaza el futuro de su nación y del mundo."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-pantera-negra.jpg" alt="Pantera Negra">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Pantera Negra</h3>
+        <p class="genre">Acción / Aventura • 2018</p>
+        <div class="rating">⭐ 7.3</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 29 -->
+    <div class="movie-card"
+      data-title="avengers endgame" data-category="accion"
+      data-subtitulo="Avengers: Endgame" data-anio="2019" data-duracion="3h 1m" data-imdb="8.4"
+      data-generos="Acción, Aventura, Drama"
+      data-descripcion="Los Vengadores que quedan se reúnen para intentar revertir el daño causado por Thanos y restaurar el equilibrio del universo."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-avengers-endgame.jpg" alt="Avengers: Endgame">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Avengers: Endgame</h3>
+        <p class="genre">Acción / Aventura • 2019</p>
+        <div class="rating">⭐ 8.4</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 30 -->
+    <div class="movie-card"
+      data-title="300" data-category="accion"
+      data-subtitulo="300" data-anio="2006" data-duracion="1h 57m" data-imdb="7.6"
+      data-generos="Acción, Drama, Bélica"
+      data-descripcion="El rey Leónidas y trescientos guerreros espartanos defienden un estrecho paso contra el inmenso ejército persa."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-300.jpg" alt="300">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>300</h3>
+        <p class="genre">Acción / Drama • 2006</p>
+        <div class="rating">⭐ 7.6</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 31 -->
+    <div class="movie-card"
+      data-title="rambo primera sangre" data-category="accion"
+      data-subtitulo="First Blood" data-anio="1982" data-duracion="1h 33m" data-imdb="7.7"
+      data-generos="Acción, Drama"
+      data-descripcion="Un veterano de guerra es acosado por la policía de un pueblo y termina librando una cacería en el bosque."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-rambo-primera-sangre.jpg" alt="Rambo: Primera sangre">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Rambo: Primera sangre</h3>
+        <p class="genre">Acción / Drama • 1982</p>
+        <div class="rating">⭐ 7.7</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 32 -->
+    <div class="movie-card"
+      data-title="el transportador" data-category="accion"
+      data-subtitulo="The Transporter" data-anio="2002" data-duracion="1h 32m" data-imdb="6.8"
+      data-generos="Acción, Crimen"
+      data-descripcion="Un conductor profesional que nunca hace preguntas rompe sus propias reglas al descubrir qué lleva en un paquete."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-transportador.jpg" alt="El transportador">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>El transportador</h3>
+        <p class="genre">Acción / Crimen • 2002</p>
+        <div class="rating">⭐ 6.8</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 33 -->
+    <div class="movie-card"
+      data-title="guardianes de la galaxia" data-category="accion cienciaficcion"
+      data-subtitulo="Guardians of the Galaxy" data-anio="2014" data-duracion="2h 1m" data-imdb="8.0"
+      data-generos="Acción, Aventura, Ciencia Ficción"
+      data-descripcion="Un grupo de inadaptados espaciales se ve obligado a trabajar en equipo para proteger un poderoso objeto codiciado por un villano."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-guardianes-de-la-galaxia.jpg" alt="Guardianes de la Galaxia">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Guardianes de la Galaxia</h3>
+        <p class="genre">Acción / Aventura • 2014</p>
+        <div class="rating">⭐ 8.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 34 -->
+    <div class="movie-card"
+      data-title="gladiador ii" data-category="accion"
+      data-subtitulo="Gladiator II" data-anio="2024" data-duracion="2h 28m" data-imdb="6.6"
+      data-generos="Acción, Drama, Aventura"
+      data-descripcion="Años después de la muerte de Máximo, un joven capturado por Roma entra a la arena y se ve ligado al destino del imperio."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-gladiador-ii.jpg" alt="Gladiador II">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Gladiador II</h3>
+        <p class="genre">Acción / Drama • 2024</p>
+        <div class="rating">⭐ 6.6</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 35 -->
+    <div class="movie-card"
+      data-title="qué pasó ayer" data-category="comedia"
+      data-subtitulo="The Hangover" data-anio="2009" data-duracion="1h 40m" data-imdb="7.7"
+      data-generos="Comedia"
+      data-descripcion="Tres amigos despiertan tras una despedida de soltero en Las Vegas sin recordar nada y con el novio desaparecido."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-que-paso-ayer.jpg" alt="¿Qué pasó ayer?">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>¿Qué pasó ayer?</h3>
+        <p class="genre">Comedia • 2009</p>
+        <div class="rating">⭐ 7.7</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 36 -->
+    <div class="movie-card"
+      data-title="mi pobre angelito" data-category="comedia"
+      data-subtitulo="Home Alone" data-anio="1990" data-duracion="1h 43m" data-imdb="7.7"
+      data-generos="Comedia, Familia"
+      data-descripcion="Un niño olvidado en casa durante las vacaciones de Navidad debe defenderla de dos ladrones torpes con todo tipo de trampas."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-mi-pobre-angelito.jpg" alt="Mi pobre angelito">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Mi pobre angelito</h3>
+        <p class="genre">Comedia / Familia • 1990</p>
+        <div class="rating">⭐ 7.7</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 37 -->
+    <div class="movie-card"
+      data-title="supercool" data-category="comedia"
+      data-subtitulo="Superbad" data-anio="2007" data-duracion="1h 53m" data-imdb="7.6"
+      data-generos="Comedia"
+      data-descripcion="Dos amigos a punto de terminar la secundaria intentan conseguir alcohol para una fiesta y viven una noche descontrolada."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-supercool.jpg" alt="Supercool">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Supercool</h3>
+        <p class="genre">Comedia • 2007</p>
+        <div class="rating">⭐ 7.6</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 38 -->
+    <div class="movie-card"
+      data-title="chicas pesadas" data-category="comedia"
+      data-subtitulo="Mean Girls" data-anio="2004" data-duracion="1h 37m" data-imdb="7.1"
+      data-generos="Comedia"
+      data-descripcion="Una chica que siempre estudió en casa llega a un instituto y se mete en el peligroso mundo de las chicas más populares."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-chicas-pesadas.jpg" alt="Chicas pesadas">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Chicas pesadas</h3>
+        <p class="genre">Comedia • 2004</p>
+        <div class="rating">⭐ 7.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 39 -->
+    <div class="movie-card"
+      data-title="los cazafantasmas" data-category="comedia fantasia"
+      data-subtitulo="Ghostbusters" data-anio="1984" data-duracion="1h 45m" data-imdb="7.8"
+      data-generos="Comedia, Fantasía"
+      data-descripcion="Tres científicos abren un negocio para capturar fantasmas en Nueva York, hasta que una amenaza sobrenatural pone en jaque la ciudad."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-los-cazafantasmas.jpg" alt="Los Cazafantasmas">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Los Cazafantasmas</h3>
+        <p class="genre">Comedia / Fantasía • 1984</p>
+        <div class="rating">⭐ 7.8</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 40 -->
+    <div class="movie-card"
+      data-title="ace ventura un detective diferente" data-category="comedia"
+      data-subtitulo="Ace Ventura: Pet Detective" data-anio="1994" data-duracion="1h 26m" data-imdb="6.9"
+      data-generos="Comedia"
+      data-descripcion="Un excéntrico detective de mascotas investiga la desaparición de la mascota de un equipo de fútbol americano."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-ace-ventura-un-detective-diferente.jpg" alt="Ace Ventura: Un detective diferente">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Ace Ventura: Un detective diferente</h3>
+        <p class="genre">Comedia • 1994</p>
+        <div class="rating">⭐ 6.9</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 41 -->
+    <div class="movie-card"
+      data-title="tonto y retonto" data-category="comedia"
+      data-subtitulo="Dumb and Dumber" data-anio="1994" data-duracion="1h 47m" data-imdb="7.3"
+      data-generos="Comedia"
+      data-descripcion="Dos amigos poco brillantes cruzan el país para devolver una maleta, sin saber en qué lío se están metiendo."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-tonto-y-retonto.jpg" alt="Tonto y retonto">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Tonto y retonto</h3>
+        <p class="genre">Comedia • 1994</p>
+        <div class="rating">⭐ 7.3</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 42 -->
+    <div class="movie-card"
+      data-title="papá por siempre" data-category="comedia"
+      data-subtitulo="Mrs. Doubtfire" data-anio="1993" data-duracion="2h 5m" data-imdb="7.1"
+      data-generos="Comedia, Familia"
+      data-descripcion="Un padre divorciado se disfraza de niñera anciana para poder pasar tiempo con sus hijos."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-papa-por-siempre.jpg" alt="Papá por siempre">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Papá por siempre</h3>
+        <p class="genre">Comedia / Familia • 1993</p>
+        <div class="rating">⭐ 7.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 43 -->
+    <div class="movie-card"
+      data-title="la boda de mi mejor amiga" data-category="comedia"
+      data-subtitulo="Bridesmaids" data-anio="2011" data-duracion="2h 5m" data-imdb="6.8"
+      data-generos="Comedia"
+      data-descripcion="Una dama de honor ve cómo todo se complica mientras intenta organizar la boda de su mejor amiga."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-la-boda-de-mi-mejor-amiga.jpg" alt="La boda de mi mejor amiga">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>La boda de mi mejor amiga</h3>
+        <p class="genre">Comedia • 2011</p>
+        <div class="rating">⭐ 6.8</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 44 -->
+    <div class="movie-card"
+      data-title="ted" data-category="comedia"
+      data-subtitulo="Ted" data-anio="2012" data-duracion="1h 46m" data-imdb="6.9"
+      data-generos="Comedia, Fantasía"
+      data-descripcion="Un hombre y su oso de peluche, que cobró vida por un deseo de infancia, siguen siendo inseparables ya de adultos."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-ted.jpg" alt="Ted">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Ted</h3>
+        <p class="genre">Comedia / Fantasía • 2012</p>
+        <div class="rating">⭐ 6.9</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 45 -->
+    <div class="movie-card"
+      data-title="click y de repente es tu vida" data-category="comedia fantasia"
+      data-subtitulo="Click" data-anio="2006" data-duracion="1h 47m" data-imdb="6.4"
+      data-generos="Comedia, Fantasía, Drama"
+      data-descripcion="Un arquitecto recibe un control remoto universal que le permite adelantar su vida, y empieza a perderse lo que más importa."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-click-y-de-repente-es-tu-vida.jpg" alt="Click: Y de repente es tu vida">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Click: Y de repente es tu vida</h3>
+        <p class="genre">Comedia / Fantasía • 2006</p>
+        <div class="rating">⭐ 6.4</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 46 -->
+    <div class="movie-card"
+      data-title="una noche en el museo" data-category="comedia"
+      data-subtitulo="Night at the Museum" data-anio="2006" data-duracion="1h 48m" data-imdb="6.5"
+      data-generos="Comedia, Aventura, Familia"
+      data-descripcion="Un vigilante nocturno descubre que las piezas del museo cobran vida cada vez que cae la noche."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-una-noche-en-el-museo.jpg" alt="Una noche en el museo">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Una noche en el museo</h3>
+        <p class="genre">Comedia / Aventura • 2006</p>
+        <div class="rating">⭐ 6.5</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 47 -->
+    <div class="movie-card"
+      data-title="pequeña miss sunshine" data-category="comedia drama"
+      data-subtitulo="Little Miss Sunshine" data-anio="2006" data-duracion="1h 41m" data-imdb="7.8"
+      data-generos="Comedia, Drama"
+      data-descripcion="Una familia poco convencional viaja en una vieja camioneta para llevar a la hija menor a un concurso de belleza."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-pequena-miss-sunshine.jpg" alt="Pequeña Miss Sunshine">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Pequeña Miss Sunshine</h3>
+        <p class="genre">Comedia / Drama • 2006</p>
+        <div class="rating">⭐ 7.8</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 48 -->
+    <div class="movie-card"
+      data-title="la hora pico" data-category="comedia accion"
+      data-subtitulo="Rush Hour" data-anio="1998" data-duracion="1h 38m" data-imdb="7.0"
+      data-generos="Comedia, Acción"
+      data-descripcion="Un detective de Hong Kong y un policía de Los Ángeles deben trabajar juntos para rescatar a la hija de un cónsul."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-la-hora-pico.jpg" alt="La hora pico">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>La hora pico</h3>
+        <p class="genre">Comedia / Acción • 1998</p>
+        <div class="rating">⭐ 7.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 49 -->
+    <div class="movie-card"
+      data-title="elf el duende" data-category="comedia"
+      data-subtitulo="Elf" data-anio="2003" data-duracion="1h 37m" data-imdb="7.1"
+      data-generos="Comedia, Familia, Fantasía"
+      data-descripcion="Un humano criado por duendes viaja a Nueva York en busca de su verdadero padre y contagia el espíritu navideño."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-elf-el-duende.jpg" alt="Elf: El duende">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Elf: El duende</h3>
+        <p class="genre">Comedia / Familia • 2003</p>
+        <div class="rating">⭐ 7.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 50 -->
+    <div class="movie-card"
+      data-title="el reportero la leyenda de ron burgundy" data-category="comedia"
+      data-subtitulo="Anchorman: The Legend of Ron Burgundy" data-anio="2004" data-duracion="1h 34m" data-imdb="7.1"
+      data-generos="Comedia"
+      data-descripcion="Un presentador de noticias muy seguro de sí mismo ve amenazado su reinado con la llegada de una colega ambiciosa."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-reportero-la-leyenda-de-ron-burgundy.jpg" alt="El reportero: La leyenda de Ron Burgundy">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>El reportero: La leyenda de Ron Burgundy</h3>
+        <p class="genre">Comedia • 2004</p>
+        <div class="rating">⭐ 7.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 51 -->
+    <div class="movie-card"
+      data-title="mi gran boda griega" data-category="comedia romance"
+      data-subtitulo="My Big Fat Greek Wedding" data-anio="2002" data-duracion="1h 36m" data-imdb="6.6"
+      data-generos="Comedia, Romance"
+      data-descripcion="Una mujer de familia griega muy tradicional se enamora de un hombre que no lo es, y ambas familias deben conocerse."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-mi-gran-boda-griega.jpg" alt="Mi gran boda griega">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Mi gran boda griega</h3>
+        <p class="genre">Comedia / Romance • 2002</p>
+        <div class="rating">⭐ 6.6</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 52 -->
+    <div class="movie-card"
+      data-title="zoolander" data-category="comedia"
+      data-subtitulo="Zoolander" data-anio="2001" data-duracion="1h 29m" data-imdb="6.5"
+      data-generos="Comedia"
+      data-descripcion="Un modelo de moda algo despistado se ve envuelto, sin saberlo, en un complot para asesinar a un líder extranjero."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-zoolander.jpg" alt="Zoolander">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Zoolander</h3>
+        <p class="genre">Comedia • 2001</p>
+        <div class="rating">⭐ 6.5</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 53 -->
+    <div class="movie-card"
+      data-title="jumanji en la selva" data-category="comedia accion"
+      data-subtitulo="Jumanji: Welcome to the Jungle" data-anio="2017" data-duracion="1h 59m" data-imdb="6.9"
+      data-generos="Comedia, Acción, Aventura"
+      data-descripcion="Cuatro estudiantes quedan atrapados dentro de un videojuego y deben superarlo encarnando a sus personajes."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-jumanji-en-la-selva.jpg" alt="Jumanji: En la selva">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Jumanji: En la selva</h3>
+        <p class="genre">Comedia / Acción • 2017</p>
+        <div class="rating">⭐ 6.9</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 54 -->
+    <div class="movie-card"
+      data-title="un día de campo con ferris bueller" data-category="comedia"
+      data-subtitulo="Ferris Bueller's Day Off" data-anio="1986" data-duracion="1h 43m" data-imdb="7.8"
+      data-generos="Comedia"
+      data-descripcion="Un estudiante finge estar enfermo para pasar un día inolvidable por la ciudad con sus amigos, mientras el director intenta atraparlo."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-un-dia-de-campo-con-ferris-bueller.jpg" alt="Un día de campo con Ferris Bueller">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Un día de campo con Ferris Bueller</h3>
+        <p class="genre">Comedia • 1986</p>
+        <div class="rating">⭐ 7.8</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 55 -->
+    <div class="movie-card"
+      data-title="el exorcista" data-category="terror"
+      data-subtitulo="The Exorcist" data-anio="1973" data-duracion="2h 2m" data-imdb="8.1"
+      data-generos="Terror"
+      data-descripcion="Una madre desesperada pide ayuda a dos sacerdotes cuando su hija comienza a mostrar un comportamiento aterrador."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-exorcista.jpg" alt="El exorcista">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>El exorcista</h3>
+        <p class="genre">Terror • 1973</p>
+        <div class="rating">⭐ 8.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 56 -->
+    <div class="movie-card"
+      data-title="el resplandor" data-category="terror"
+      data-subtitulo="The Shining" data-anio="1980" data-duracion="2h 26m" data-imdb="8.4"
+      data-generos="Terror, Suspenso"
+      data-descripcion="Un escritor se muda con su familia a un hotel aislado durante el invierno y la locura empieza a apoderarse de él."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-resplandor.jpg" alt="El resplandor">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>El resplandor</h3>
+        <p class="genre">Terror / Suspenso • 1980</p>
+        <div class="rating">⭐ 8.4</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 57 -->
+    <div class="movie-card"
+      data-title="psicosis" data-category="terror"
+      data-subtitulo="Psycho" data-anio="1960" data-duracion="1h 49m" data-imdb="8.5"
+      data-generos="Terror, Suspenso"
+      data-descripcion="Una mujer que huye con dinero robado se hospeda en un motel solitario administrado por un joven muy peculiar."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-psicosis.jpg" alt="Psicosis">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Psicosis</h3>
+        <p class="genre">Terror / Suspenso • 1960</p>
+        <div class="rating">⭐ 8.5</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 58 -->
+    <div class="movie-card"
+      data-title="tiburón" data-category="terror aventura"
+      data-subtitulo="Jaws" data-anio="1975" data-duracion="2h 4m" data-imdb="8.1"
+      data-generos="Terror, Aventura, Suspenso"
+      data-descripcion="Un jefe de policía, un biólogo y un pescador salen al mar para cazar a un enorme tiburón blanco que ataca una playa."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-tiburon.jpg" alt="Tiburón">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Tiburón</h3>
+        <p class="genre">Terror / Aventura • 1975</p>
+        <div class="rating">⭐ 8.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 59 -->
+    <div class="movie-card"
+      data-title="pesadilla en la calle del infierno" data-category="terror"
+      data-subtitulo="A Nightmare on Elm Street" data-anio="1984" data-duracion="1h 31m" data-imdb="7.4"
+      data-generos="Terror"
+      data-descripcion="Un grupo de adolescentes es perseguido en sus sueños por un asesino con garras que puede matarlos de verdad."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-pesadilla-en-la-calle-del-infierno.jpg" alt="Pesadilla en la calle del infierno">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Pesadilla en la calle del infierno</h3>
+        <p class="genre">Terror • 1984</p>
+        <div class="rating">⭐ 7.4</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 60 -->
+    <div class="movie-card"
+      data-title="halloween la noche de las brujas" data-category="terror"
+      data-subtitulo="Halloween" data-anio="1978" data-duracion="1h 31m" data-imdb="7.7"
+      data-generos="Terror, Suspenso"
+      data-descripcion="Quince años después de un crimen, un asesino escapa de un hospital psiquiátrico y vuelve a su pueblo la noche de Halloween."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-halloween-la-noche-de-las-brujas.jpg" alt="Halloween: La noche de las brujas">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Halloween: La noche de las brujas</h3>
+        <p class="genre">Terror / Suspenso • 1978</p>
+        <div class="rating">⭐ 7.7</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 61 -->
+    <div class="movie-card"
+      data-title="scream vigilante nocturno" data-category="terror"
+      data-subtitulo="Scream" data-anio="1996" data-duracion="1h 51m" data-imdb="7.4"
+      data-generos="Terror, Misterio"
+      data-descripcion="Un asesino enmascarado acecha a una joven y a sus amigos mientras juega con ellos usando las reglas de las películas de terror."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-scream-vigilante-nocturno.jpg" alt="Scream: Vigilante nocturno">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Scream: Vigilante nocturno</h3>
+        <p class="genre">Terror / Misterio • 1996</p>
+        <div class="rating">⭐ 7.4</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 62 -->
+    <div class="movie-card"
+      data-title="sinister" data-category="terror"
+      data-subtitulo="Sinister" data-anio="2012" data-duracion="1h 50m" data-imdb="6.8"
+      data-generos="Terror, Misterio"
+      data-descripcion="Un escritor de crímenes reales encuentra unas películas caseras en su nuevo hogar y descubre una presencia que amenaza a su familia."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-sinister.jpg" alt="Sinister">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Sinister</h3>
+        <p class="genre">Terror / Misterio • 2012</p>
+        <div class="rating">⭐ 6.8</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 63 -->
+    <div class="movie-card"
+      data-title="el conjuro" data-category="terror"
+      data-subtitulo="The Conjuring" data-anio="2013" data-duracion="1h 52m" data-imdb="7.5"
+      data-generos="Terror, Misterio"
+      data-descripcion="Dos investigadores paranormales ayudan a una familia atormentada por una presencia oscura en su casa de campo."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-conjuro.jpg" alt="El conjuro">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>El conjuro</h3>
+        <p class="genre">Terror / Misterio • 2013</p>
+        <div class="rating">⭐ 7.5</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 64 -->
+    <div class="movie-card"
+      data-title="la noche del demonio" data-category="terror"
+      data-subtitulo="Insidious" data-anio="2010" data-duracion="1h 43m" data-imdb="6.8"
+      data-generos="Terror, Misterio"
+      data-descripcion="Unos padres descubren que el estado de su hijo en coma no es médico, sino algo mucho más oscuro."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-la-noche-del-demonio.jpg" alt="La noche del demonio">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>La noche del demonio</h3>
+        <p class="genre">Terror / Misterio • 2010</p>
+        <div class="rating">⭐ 6.8</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 65 -->
+    <div class="movie-card"
+      data-title="it eso" data-category="terror"
+      data-subtitulo="It" data-anio="2017" data-duracion="2h 15m" data-imdb="7.3"
+      data-generos="Terror, Drama"
+      data-descripcion="Un grupo de niños marginados se enfrenta a una criatura que se alimenta del miedo y toma la forma de un payaso."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-it-eso.jpg" alt="It: Eso">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>It: Eso</h3>
+        <p class="genre">Terror / Drama • 2017</p>
+        <div class="rating">⭐ 7.3</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 66 -->
+    <div class="movie-card"
+      data-title="el legado del diablo" data-category="terror"
+      data-subtitulo="Hereditary" data-anio="2018" data-duracion="2h 7m" data-imdb="7.3"
+      data-generos="Terror, Drama"
+      data-descripcion="Tras la muerte de la abuela, una familia empieza a descubrir secretos perturbadores sobre su pasado."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-legado-del-diablo.jpg" alt="El legado del diablo">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>El legado del diablo</h3>
+        <p class="genre">Terror / Drama • 2018</p>
+        <div class="rating">⭐ 7.3</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 67 -->
+    <div class="movie-card"
+      data-title="huye" data-category="terror"
+      data-subtitulo="Get Out" data-anio="2017" data-duracion="1h 44m" data-imdb="7.7"
+      data-generos="Terror, Misterio"
+      data-descripcion="Un joven visita por primera vez a la familia de su novia y se da cuenta de que algo muy extraño ocurre en esa casa."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-huye.jpg" alt="¡Huye!">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>¡Huye!</h3>
+        <p class="genre">Terror / Misterio • 2017</p>
+        <div class="rating">⭐ 7.7</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 68 -->
+    <div class="movie-card"
+      data-title="un lugar en silencio" data-category="terror"
+      data-subtitulo="A Quiet Place" data-anio="2018" data-duracion="1h 30m" data-imdb="7.5"
+      data-generos="Terror, Ciencia Ficción"
+      data-descripcion="Una familia debe vivir en silencio absoluto para sobrevivir a unas criaturas que cazan por el sonido."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-un-lugar-en-silencio.jpg" alt="Un lugar en silencio">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Un lugar en silencio</h3>
+        <p class="genre">Terror / Ciencia Ficción • 2018</p>
+        <div class="rating">⭐ 7.5</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 69 -->
+    <div class="movie-card"
+      data-title="la masacre de texas" data-category="terror"
+      data-subtitulo="The Texas Chain Saw Massacre" data-anio="1974" data-duracion="1h 23m" data-imdb="7.4"
+      data-generos="Terror"
+      data-descripcion="Un grupo de jóvenes que viaja por Texas cae en manos de una familia de caníbales."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-la-masacre-de-texas.jpg" alt="La masacre de Texas">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>La masacre de Texas</h3>
+        <p class="genre">Terror • 1974</p>
+        <div class="rating">⭐ 7.4</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 70 -->
+    <div class="movie-card"
+      data-title="el aro" data-category="terror"
+      data-subtitulo="The Ring" data-anio="2002" data-duracion="1h 55m" data-imdb="7.1"
+      data-generos="Terror, Misterio"
+      data-descripcion="Una periodista investiga una cinta de video maldita que, según dicen, causa la muerte de quien la ve siete días después."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-aro.jpg" alt="El aro">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>El aro</h3>
+        <p class="genre">Terror / Misterio • 2002</p>
+        <div class="rating">⭐ 7.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 71 -->
+    <div class="movie-card"
+      data-title="posesión infernal" data-category="terror"
+      data-subtitulo="The Evil Dead" data-anio="1981" data-duracion="1h 25m" data-imdb="7.4"
+      data-generos="Terror"
+      data-descripcion="Cinco amigos pasan un fin de semana en una cabaña aislada y despiertan sin querer a una fuerza demoníaca."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-posesion-infernal.jpg" alt="Posesión infernal">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Posesión infernal</h3>
+        <p class="genre">Terror • 1981</p>
+        <div class="rating">⭐ 7.4</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 72 -->
+    <div class="movie-card"
+      data-title="el juego del miedo" data-category="terror"
+      data-subtitulo="Saw" data-anio="2004" data-duracion="1h 43m" data-imdb="7.6"
+      data-generos="Terror, Misterio"
+      data-descripcion="Dos hombres despiertan encadenados en un baño sucio, obligados a participar en el macabro juego de un misterioso asesino."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-juego-del-miedo.jpg" alt="El juego del miedo">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>El juego del miedo</h3>
+        <p class="genre">Terror / Misterio • 2004</p>
+        <div class="rating">⭐ 7.6</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 73 -->
+    <div class="movie-card"
+      data-title="el bebé de rosemary" data-category="terror"
+      data-subtitulo="Rosemary's Baby" data-anio="1968" data-duracion="2h 17m" data-imdb="8.0"
+      data-generos="Terror, Drama"
+      data-descripcion="Una joven embarazada empieza a sospechar que sus vecinos y su propio esposo ocultan algo siniestro sobre su bebé."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-bebe-de-rosemary.jpg" alt="El bebé de Rosemary">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>El bebé de Rosemary</h3>
+        <p class="genre">Terror / Drama • 1968</p>
+        <div class="rating">⭐ 8.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 74 -->
+    <div class="movie-card"
+      data-title="no respires" data-category="terror"
+      data-subtitulo="Don't Breathe" data-anio="2016" data-duracion="1h 28m" data-imdb="7.1"
+      data-generos="Terror, Suspenso"
+      data-descripcion="Tres jóvenes entran a robar en la casa de un hombre ciego, pero él resulta ser mucho más peligroso de lo que imaginaban."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-no-respires.jpg" alt="No respires">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>No respires</h3>
+        <p class="genre">Terror / Suspenso • 2016</p>
+        <div class="rating">⭐ 7.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 75 -->
+    <div class="movie-card"
+      data-title="titanic" data-category="romance drama"
+      data-subtitulo="Titanic" data-anio="1997" data-duracion="3h 14m" data-imdb="7.9"
+      data-generos="Romance, Drama"
+      data-descripcion="Una joven aristócrata y un artista pobre se enamoran a bordo del famoso transatlántico en su viaje inaugural."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-titanic.jpg" alt="Titanic">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Titanic</h3>
+        <p class="genre">Romance / Drama • 1997</p>
+        <div class="rating">⭐ 7.9</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 76 -->
+    <div class="movie-card"
+      data-title="diario de una pasión" data-category="romance drama"
+      data-subtitulo="The Notebook" data-anio="2004" data-duracion="2h 3m" data-imdb="7.8"
+      data-generos="Romance, Drama"
+      data-descripcion="Un anciano le lee a una mujer la historia de un amor de juventud que desafió las diferencias sociales y el paso del tiempo."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-diario-de-una-pasion.jpg" alt="Diario de una pasión">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Diario de una pasión</h3>
+        <p class="genre">Romance / Drama • 2004</p>
+        <div class="rating">⭐ 7.8</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 77 -->
+    <div class="movie-card"
+      data-title="orgullo y prejuicio" data-category="romance drama"
+      data-subtitulo="Pride &amp; Prejudice" data-anio="2005" data-duracion="2h 9m" data-imdb="7.8"
+      data-generos="Romance, Drama"
+      data-descripcion="Elizabeth Bennet y el reservado señor Darcy deben superar sus prejuicios y diferencias de clase para reconocer lo que sienten."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-orgullo-y-prejuicio.jpg" alt="Orgullo y prejuicio">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Orgullo y prejuicio</h3>
+        <p class="genre">Romance / Drama • 2005</p>
+        <div class="rating">⭐ 7.8</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 78 -->
+    <div class="movie-card"
+      data-title="la la land una historia de amor" data-category="romance drama"
+      data-subtitulo="La La Land" data-anio="2016" data-duracion="2h 8m" data-imdb="8.0"
+      data-generos="Romance, Drama, Musical"
+      data-descripcion="Una aspirante a actriz y un pianista de jazz se enamoran en Los Ángeles mientras persiguen sus sueños."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-la-la-land-una-historia-de-amor.jpg" alt="La La Land: Una historia de amor">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>La La Land: Una historia de amor</h3>
+        <p class="genre">Romance / Drama • 2016</p>
+        <div class="rating">⭐ 8.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 79 -->
+    <div class="movie-card"
+      data-title="antes del amanecer" data-category="romance drama"
+      data-subtitulo="Before Sunrise" data-anio="1995" data-duracion="1h 41m" data-imdb="8.1"
+      data-generos="Romance, Drama"
+      data-descripcion="Dos desconocidos se conocen en un tren y pasan una noche recorriendo Viena, hablando de la vida y del amor."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-antes-del-amanecer.jpg" alt="Antes del amanecer">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Antes del amanecer</h3>
+        <p class="genre">Romance / Drama • 1995</p>
+        <div class="rating">⭐ 8.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 80 -->
+    <div class="movie-card"
+      data-title="mujer bonita" data-category="romance comedia"
+      data-subtitulo="Pretty Woman" data-anio="1990" data-duracion="1h 59m" data-imdb="7.1"
+      data-generos="Romance, Comedia"
+      data-descripcion="Un empresario contrata a una joven para que lo acompañe unos días y ambos terminan cambiando la vida del otro."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-mujer-bonita.jpg" alt="Mujer bonita">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Mujer bonita</h3>
+        <p class="genre">Romance / Comedia • 1990</p>
+        <div class="rating">⭐ 7.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 81 -->
+    <div class="movie-card"
+      data-title="ghost la sombra del amor" data-category="romance drama"
+      data-subtitulo="Ghost" data-anio="1990" data-duracion="2h 7m" data-imdb="7.1"
+      data-generos="Romance, Drama, Fantasía"
+      data-descripcion="Un hombre asesinado queda atrapado como fantasma y se comunica con una médium para proteger a su novia."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-ghost-la-sombra-del-amor.jpg" alt="Ghost: La sombra del amor">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Ghost: La sombra del amor</h3>
+        <p class="genre">Romance / Drama • 1990</p>
+        <div class="rating">⭐ 7.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 82 -->
+    <div class="movie-card"
+      data-title="cuando harry conoció a sally" data-category="romance comedia"
+      data-subtitulo="When Harry Met Sally..." data-anio="1989" data-duracion="1h 36m" data-imdb="7.6"
+      data-generos="Romance, Comedia"
+      data-descripcion="Durante años, un hombre y una mujer se preguntan si un hombre y una mujer pueden ser solo amigos."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-cuando-harry-conocio-a-sally.jpg" alt="Cuando Harry conoció a Sally">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Cuando Harry conoció a Sally</h3>
+        <p class="genre">Romance / Comedia • 1989</p>
+        <div class="rating">⭐ 7.6</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 83 -->
+    <div class="movie-card"
+      data-title="un lugar llamado notting hill" data-category="romance comedia"
+      data-subtitulo="Notting Hill" data-anio="1999" data-duracion="2h 4m" data-imdb="7.2"
+      data-generos="Romance, Comedia"
+      data-descripcion="El dueño de una librería londinense se enamora de una famosa estrella de cine que entra por casualidad a su tienda."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-un-lugar-llamado-notting-hill.jpg" alt="Un lugar llamado Notting Hill">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Un lugar llamado Notting Hill</h3>
+        <p class="genre">Romance / Comedia • 1999</p>
+        <div class="rating">⭐ 7.2</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 84 -->
+    <div class="movie-card"
+      data-title="realmente amor" data-category="romance comedia"
+      data-subtitulo="Love Actually" data-anio="2003" data-duracion="2h 15m" data-imdb="7.6"
+      data-generos="Romance, Comedia"
+      data-descripcion="Varias historias de amor se entrelazan en Londres durante las semanas previas a la Navidad."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-realmente-amor.jpg" alt="Realmente amor">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Realmente amor</h3>
+        <p class="genre">Romance / Comedia • 2003</p>
+        <div class="rating">⭐ 7.6</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 85 -->
+    <div class="movie-card"
+      data-title="bajo la misma estrella" data-category="romance drama"
+      data-subtitulo="The Fault in Our Stars" data-anio="2014" data-duracion="2h 6m" data-imdb="7.7"
+      data-generos="Romance, Drama"
+      data-descripcion="Dos jóvenes que se conocen en un grupo de apoyo comparten una historia de amor marcada por la enfermedad."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-bajo-la-misma-estrella.jpg" alt="Bajo la misma estrella">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Bajo la misma estrella</h3>
+        <p class="genre">Romance / Drama • 2014</p>
+        <div class="rating">⭐ 7.7</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 86 -->
+    <div class="movie-card"
+      data-title="antes de ti" data-category="romance drama"
+      data-subtitulo="Me Before You" data-anio="2016" data-duracion="1h 50m" data-imdb="7.4"
+      data-generos="Romance, Drama"
+      data-descripcion="Una joven sin rumbo se convierte en cuidadora de un hombre que quedó en silla de ruedas, y ambos cambian el uno al otro."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-antes-de-ti.jpg" alt="Antes de ti">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Antes de ti</h3>
+        <p class="genre">Romance / Drama • 2016</p>
+        <div class="rating">⭐ 7.4</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 87 -->
+    <div class="movie-card"
+      data-title="moulin rouge" data-category="romance drama"
+      data-subtitulo="Moulin Rouge!" data-anio="2001" data-duracion="2h 7m" data-imdb="7.6"
+      data-generos="Romance, Drama, Musical"
+      data-descripcion="Un joven poeta se enamora de la estrella de un cabaret parisino, pero un duque celoso se interpone entre ellos."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-moulin-rouge.jpg" alt="Moulin Rouge!">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Moulin Rouge!</h3>
+        <p class="genre">Romance / Drama • 2001</p>
+        <div class="rating">⭐ 7.6</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 88 -->
+    <div class="movie-card"
+      data-title="casablanca" data-category="romance drama"
+      data-subtitulo="Casablanca" data-anio="1942" data-duracion="1h 42m" data-imdb="8.5"
+      data-generos="Romance, Drama"
+      data-descripcion="En plena guerra, el dueño de un bar en Marruecos debe decidir entre su antiguo amor y hacer lo correcto."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-casablanca.jpg" alt="Casablanca">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Casablanca</h3>
+        <p class="genre">Romance / Drama • 1942</p>
+        <div class="rating">⭐ 8.5</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 89 -->
+    <div class="movie-card"
+      data-title="querido john" data-category="romance drama"
+      data-subtitulo="Dear John" data-anio="2010" data-duracion="1h 48m" data-imdb="6.3"
+      data-generos="Romance, Drama"
+      data-descripcion="Un soldado y una universitaria se enamoran durante unas vacaciones y tratan de mantener su relación a la distancia."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-querido-john.jpg" alt="Querido John">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Querido John</h3>
+        <p class="genre">Romance / Drama • 2010</p>
+        <div class="rating">⭐ 6.3</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 90 -->
+    <div class="movie-card"
+      data-title="posdata te amo" data-category="romance drama"
+      data-subtitulo="P.S. I Love You" data-anio="2007" data-duracion="2h 6m" data-imdb="7.1"
+      data-generos="Romance, Drama"
+      data-descripcion="Una viuda recibe cartas que su esposo dejó escritas antes de morir, para ayudarla a seguir adelante."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-posdata-te-amo.jpg" alt="Posdata: Te amo">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Posdata: Te amo</h3>
+        <p class="genre">Romance / Drama • 2007</p>
+        <div class="rating">⭐ 7.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 91 -->
+    <div class="movie-card"
+      data-title="eterno resplandor de una mente sin recuerdos" data-category="romance cienciaficcion"
+      data-subtitulo="Eternal Sunshine of the Spotless Mind" data-anio="2004" data-duracion="1h 48m" data-imdb="8.3"
+      data-generos="Romance, Drama, Ciencia Ficción"
+      data-descripcion="Una pareja se somete a un procedimiento para borrar el recuerdo del otro, pero en el proceso redescubre lo que los unió."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-eterno-resplandor-de-una-mente-sin-recuerdos.jpg" alt="Eterno resplandor de una mente sin recuerdos">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Eterno resplandor de una mente sin recuerdos</h3>
+        <p class="genre">Romance / Drama • 2004</p>
+        <div class="rating">⭐ 8.3</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 92 -->
+    <div class="movie-card"
+      data-title="cartas a julieta" data-category="romance comedia"
+      data-subtitulo="Letters to Juliet" data-anio="2010" data-duracion="1h 45m" data-imdb="6.5"
+      data-generos="Romance, Comedia"
+      data-descripcion="Una joven en Verona responde una carta olvidada y se embarca en un viaje por Italia en busca de un amor perdido."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-cartas-a-julieta.jpg" alt="Cartas a Julieta">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Cartas a Julieta</h3>
+        <p class="genre">Romance / Comedia • 2010</p>
+        <div class="rating">⭐ 6.5</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 93 -->
+    <div class="movie-card"
+      data-title="a todos los chicos de los que me enamoré" data-category="romance comedia"
+      data-subtitulo="To All the Boys I've Loved Before" data-anio="2018" data-duracion="1h 39m" data-imdb="7.0"
+      data-generos="Romance, Comedia"
+      data-descripcion="Las cartas secretas de una adolescente a sus antiguos amores se envían sin que ella lo sepa, y su vida se vuelve un caos."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-a-todos-los-chicos-de-los-que-me-enamore.jpg" alt="A todos los chicos de los que me enamoré">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>A todos los chicos de los que me enamoré</h3>
+        <p class="genre">Romance / Comedia • 2018</p>
+        <div class="rating">⭐ 7.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 94 -->
+    <div class="movie-card"
+      data-title="dirty dancing" data-category="romance drama"
+      data-subtitulo="Dirty Dancing" data-anio="1987" data-duracion="1h 40m" data-imdb="7.0"
+      data-generos="Romance, Drama, Musical"
+      data-descripcion="Durante unas vacaciones de verano, una joven aprende a bailar y se enamora de su apuesto instructor."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-dirty-dancing.jpg" alt="Dirty Dancing">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Dirty Dancing</h3>
+        <p class="genre">Romance / Drama • 1987</p>
+        <div class="rating">⭐ 7.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 95 -->
+    <div class="movie-card"
+      data-title="matrix" data-category="cienciaficcion accion"
+      data-subtitulo="The Matrix" data-anio="1999" data-duracion="2h 16m" data-imdb="8.7"
+      data-generos="Ciencia Ficción, Acción"
+      data-descripcion="Un programador descubre que la realidad es una simulación creada por máquinas y se une a una rebelión para liberar a la humanidad."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-matrix.jpg" alt="Matrix">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Matrix</h3>
+        <p class="genre">Ciencia Ficción / Acción • 1999</p>
+        <div class="rating">⭐ 8.7</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 96 -->
+    <div class="movie-card"
+      data-title="blade runner" data-category="cienciaficcion drama"
+      data-subtitulo="Blade Runner" data-anio="1982" data-duracion="1h 57m" data-imdb="8.1"
+      data-generos="Ciencia Ficción, Drama, Suspenso"
+      data-descripcion="Un cazador de androides persigue a un grupo de réplicas fugitivas en una Los Ángeles futurista y lluviosa."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-blade-runner.jpg" alt="Blade Runner">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Blade Runner</h3>
+        <p class="genre">Ciencia Ficción / Drama • 1982</p>
+        <div class="rating">⭐ 8.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 97 -->
+    <div class="movie-card"
+      data-title="star wars una nueva esperanza" data-category="cienciaficcion accion"
+      data-subtitulo="Star Wars: Episode IV - A New Hope" data-anio="1977" data-duracion="2h 1m" data-imdb="8.6"
+      data-generos="Ciencia Ficción, Aventura, Acción"
+      data-descripcion="Un joven granjero se une a un caballero Jedi, un contrabandista y una princesa para enfrentar al Imperio Galáctico."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-star-wars-una-nueva-esperanza.jpg" alt="Star Wars: Una nueva esperanza">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Star Wars: Una nueva esperanza</h3>
+        <p class="genre">Ciencia Ficción / Aventura • 1977</p>
+        <div class="rating">⭐ 8.6</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 98 -->
+    <div class="movie-card"
+      data-title="alien el octavo pasajero" data-category="cienciaficcion terror"
+      data-subtitulo="Alien" data-anio="1979" data-duracion="1h 57m" data-imdb="8.5"
+      data-generos="Ciencia Ficción, Terror"
+      data-descripcion="La tripulación de una nave comercial descubre que una criatura letal ha subido a bordo y los acecha uno a uno."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-alien-el-octavo-pasajero.jpg" alt="Alien: El octavo pasajero">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Alien: El octavo pasajero</h3>
+        <p class="genre">Ciencia Ficción / Terror • 1979</p>
+        <div class="rating">⭐ 8.5</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 99 -->
+    <div class="movie-card"
+      data-title="el origen" data-category="cienciaficcion accion"
+      data-subtitulo="Inception" data-anio="2010" data-duracion="2h 28m" data-imdb="8.8"
+      data-generos="Ciencia Ficción, Acción, Suspenso"
+      data-descripcion="Un ladrón especializado en robar secretos a través de los sueños recibe la misión de implantar una idea en la mente de alguien."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-origen.jpg" alt="El origen">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>El origen</h3>
+        <p class="genre">Ciencia Ficción / Acción • 2010</p>
+        <div class="rating">⭐ 8.8</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 100 -->
+    <div class="movie-card"
+      data-title="avatar" data-category="cienciaficcion aventura"
+      data-subtitulo="Avatar" data-anio="2009" data-duracion="2h 42m" data-imdb="7.9"
+      data-generos="Ciencia Ficción, Aventura, Acción"
+      data-descripcion="Un exmarine entra en el cuerpo de un ser de otra especie en el planeta Pandora y debe elegir de qué lado está."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-avatar.jpg" alt="Avatar">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Avatar</h3>
+        <p class="genre">Ciencia Ficción / Aventura • 2009</p>
+        <div class="rating">⭐ 7.9</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 101 -->
+    <div class="movie-card"
+      data-title="dune" data-category="cienciaficcion aventura"
+      data-subtitulo="Dune" data-anio="2021" data-duracion="2h 35m" data-imdb="8.0"
+      data-generos="Ciencia Ficción, Aventura, Drama"
+      data-descripcion="El joven Paul Atreides viaja al peligroso planeta desértico Arrakis, fuente de la sustancia más valiosa del universo."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-dune.jpg" alt="Dune">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Dune</h3>
+        <p class="genre">Ciencia Ficción / Aventura • 2021</p>
+        <div class="rating">⭐ 8.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 102 -->
+    <div class="movie-card"
+      data-title="volver al futuro" data-category="cienciaficcion comedia"
+      data-subtitulo="Back to the Future" data-anio="1985" data-duracion="1h 56m" data-imdb="8.5"
+      data-generos="Ciencia Ficción, Comedia, Aventura"
+      data-descripcion="Un adolescente viaja en el tiempo a 1955 en un auto modificado y debe asegurarse de que sus padres se enamoren."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-volver-al-futuro.jpg" alt="Volver al futuro">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Volver al futuro</h3>
+        <p class="genre">Ciencia Ficción / Comedia • 1985</p>
+        <div class="rating">⭐ 8.5</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 103 -->
+    <div class="movie-card"
+      data-title="parque jurásico" data-category="cienciaficcion aventura"
+      data-subtitulo="Jurassic Park" data-anio="1993" data-duracion="2h 7m" data-imdb="8.2"
+      data-generos="Ciencia Ficción, Aventura"
+      data-descripcion="Un parque temático con dinosaurios clonados se sale de control cuando falla el sistema de seguridad."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-parque-jurasico.jpg" alt="Parque Jurásico">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Parque Jurásico</h3>
+        <p class="genre">Ciencia Ficción / Aventura • 1993</p>
+        <div class="rating">⭐ 8.2</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 104 -->
+    <div class="movie-card"
+      data-title="et el extraterrestre" data-category="cienciaficcion aventura"
+      data-subtitulo="E.T. the Extra-Terrestrial" data-anio="1982" data-duracion="1h 55m" data-imdb="7.9"
+      data-generos="Ciencia Ficción, Aventura, Familia"
+      data-descripcion="Un niño esconde en su casa a un extraterrestre perdido y lo ayuda a regresar a su planeta antes de que el gobierno lo encuentre."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-e-t-el-extraterrestre.jpg" alt="E.T., el extraterrestre">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>E.T., el extraterrestre</h3>
+        <p class="genre">Ciencia Ficción / Aventura • 1982</p>
+        <div class="rating">⭐ 7.9</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 105 -->
+    <div class="movie-card"
+      data-title="los juegos del hambre" data-category="cienciaficcion accion"
+      data-subtitulo="The Hunger Games" data-anio="2012" data-duracion="2h 22m" data-imdb="7.2"
+      data-generos="Ciencia Ficción, Acción, Aventura"
+      data-descripcion="En un futuro distópico, una joven se ofrece como voluntaria para sustituir a su hermana en un cruel torneo televisado a muerte."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-los-juegos-del-hambre.jpg" alt="Los juegos del hambre">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Los juegos del hambre</h3>
+        <p class="genre">Ciencia Ficción / Acción • 2012</p>
+        <div class="rating">⭐ 7.2</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 106 -->
+    <div class="movie-card"
+      data-title="gravedad" data-category="cienciaficcion drama"
+      data-subtitulo="Gravity" data-anio="2013" data-duracion="1h 31m" data-imdb="7.7"
+      data-generos="Ciencia Ficción, Drama, Suspenso"
+      data-descripcion="Dos astronautas quedan a la deriva en el espacio tras un accidente y deben encontrar la forma de regresar a la Tierra."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-gravedad.jpg" alt="Gravedad">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Gravedad</h3>
+        <p class="genre">Ciencia Ficción / Drama • 2013</p>
+        <div class="rating">⭐ 7.7</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 107 -->
+    <div class="movie-card"
+      data-title="minority report" data-category="cienciaficcion accion"
+      data-subtitulo="Minority Report" data-anio="2002" data-duracion="2h 25m" data-imdb="7.6"
+      data-generos="Ciencia Ficción, Acción, Misterio"
+      data-descripcion="En un futuro donde los crímenes se predicen antes de cometerse, un policía es acusado de un asesinato que aún no ha ocurrido."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-minority-report.jpg" alt="Minority Report">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Minority Report</h3>
+        <p class="genre">Ciencia Ficción / Acción • 2002</p>
+        <div class="rating">⭐ 7.6</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 108 -->
+    <div class="movie-card"
+      data-title="ready player one" data-category="cienciaficcion aventura"
+      data-subtitulo="Ready Player One" data-anio="2018" data-duracion="2h 20m" data-imdb="7.4"
+      data-generos="Ciencia Ficción, Aventura, Acción"
+      data-descripcion="Un joven se sumerge en un mundo virtual en busca de un tesoro escondido que dará el control de ese universo a quien lo encuentre."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-ready-player-one.jpg" alt="Ready Player One">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Ready Player One</h3>
+        <p class="genre">Ciencia Ficción / Aventura • 2018</p>
+        <div class="rating">⭐ 7.4</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 109 -->
+    <div class="movie-card"
+      data-title="contacto" data-category="cienciaficcion drama"
+      data-subtitulo="Contact" data-anio="1997" data-duracion="2h 30m" data-imdb="7.5"
+      data-generos="Ciencia Ficción, Drama, Misterio"
+      data-descripcion="Una científica recibe la primera señal de vida extraterrestre y se convierte en pieza clave del primer contacto."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-contacto.jpg" alt="Contacto">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Contacto</h3>
+        <p class="genre">Ciencia Ficción / Drama • 1997</p>
+        <div class="rating">⭐ 7.5</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 110 -->
+    <div class="movie-card"
+      data-title="la llegada" data-category="cienciaficcion drama"
+      data-subtitulo="Arrival" data-anio="2016" data-duracion="1h 56m" data-imdb="7.9"
+      data-generos="Ciencia Ficción, Drama, Misterio"
+      data-descripcion="Una lingüista debe descifrar el idioma de unos visitantes alienígenas antes de que el mundo caiga en un conflicto."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-la-llegada.jpg" alt="La llegada">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>La llegada</h3>
+        <p class="genre">Ciencia Ficción / Drama • 2016</p>
+        <div class="rating">⭐ 7.9</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 111 -->
+    <div class="movie-card"
+      data-title="yo robot" data-category="cienciaficcion accion"
+      data-subtitulo="I, Robot" data-anio="2004" data-duracion="1h 55m" data-imdb="7.1"
+      data-generos="Ciencia Ficción, Acción, Misterio"
+      data-descripcion="En un futuro lleno de robots al servicio humano, un detective sospecha que una máquina cometió un asesinato."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-yo-robot.jpg" alt="Yo, robot">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Yo, robot</h3>
+        <p class="genre">Ciencia Ficción / Acción • 2004</p>
+        <div class="rating">⭐ 7.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 112 -->
+    <div class="movie-card"
+      data-title="star trek" data-category="cienciaficcion aventura"
+      data-subtitulo="Star Trek" data-anio="2009" data-duracion="2h 7m" data-imdb="7.9"
+      data-generos="Ciencia Ficción, Aventura, Acción"
+      data-descripcion="Una tripulación de jóvenes cadetes se une a bordo de la nave Enterprise para detener a un villano que viaja desde el futuro."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-star-trek.jpg" alt="Star Trek">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Star Trek</h3>
+        <p class="genre">Ciencia Ficción / Aventura • 2009</p>
+        <div class="rating">⭐ 7.9</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 113 -->
+    <div class="movie-card"
+      data-title="misión rescate" data-category="cienciaficcion drama"
+      data-subtitulo="The Martian" data-anio="2015" data-duracion="2h 24m" data-imdb="8.0"
+      data-generos="Ciencia Ficción, Drama, Aventura"
+      data-descripcion="Un astronauta es dado por muerto y abandonado en Marte, donde debe ingeniárselas para sobrevivir hasta que lo rescaten."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-mision-rescate.jpg" alt="Misión rescate">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Misión rescate</h3>
+        <p class="genre">Ciencia Ficción / Drama • 2015</p>
+        <div class="rating">⭐ 8.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 114 -->
+    <div class="movie-card"
+      data-title="ex machina" data-category="cienciaficcion drama"
+      data-subtitulo="Ex Machina" data-anio="2014" data-duracion="1h 48m" data-imdb="7.7"
+      data-generos="Ciencia Ficción, Drama, Suspenso"
+      data-descripcion="Un programador es invitado a evaluar si una androide creada por su jefe tiene conciencia propia."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-ex-machina.jpg" alt="Ex Machina">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Ex Machina</h3>
+        <p class="genre">Ciencia Ficción / Drama • 2014</p>
+        <div class="rating">⭐ 7.7</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 115 -->
+    <div class="movie-card"
+      data-title="el rey león" data-category="animacion aventura"
+      data-subtitulo="The Lion King" data-anio="1994" data-duracion="1h 28m" data-imdb="8.5"
+      data-generos="Animación, Aventura, Drama"
+      data-descripcion="Un joven león huye tras la muerte de su padre y debe regresar para reclamar su lugar como rey de las Tierras del Reino."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-rey-leon.jpg" alt="El rey león">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>El rey león</h3>
+        <p class="genre">Animación / Aventura • 1994</p>
+        <div class="rating">⭐ 8.5</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 116 -->
+    <div class="movie-card"
+      data-title="toy story" data-category="animacion comedia"
+      data-subtitulo="Toy Story" data-anio="1995" data-duracion="1h 21m" data-imdb="8.3"
+      data-generos="Animación, Comedia, Aventura"
+      data-descripcion="Los juguetes de un niño cobran vida cuando él no está, y un vaquero y un astronauta de juguete tienen que aprender a convivir."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-toy-story.jpg" alt="Toy Story">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Toy Story</h3>
+        <p class="genre">Animación / Comedia • 1995</p>
+        <div class="rating">⭐ 8.3</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 117 -->
+    <div class="movie-card"
+      data-title="buscando a nemo" data-category="animacion aventura"
+      data-subtitulo="Finding Nemo" data-anio="2003" data-duracion="1h 40m" data-imdb="8.2"
+      data-generos="Animación, Aventura, Comedia"
+      data-descripcion="Un pez payaso cruza el océano en busca de su hijo, ayudado por una pez cirujano con muy mala memoria."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-buscando-a-nemo.jpg" alt="Buscando a Nemo">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Buscando a Nemo</h3>
+        <p class="genre">Animación / Aventura • 2003</p>
+        <div class="rating">⭐ 8.2</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 118 -->
+    <div class="movie-card"
+      data-title="shrek" data-category="animacion comedia"
+      data-subtitulo="Shrek" data-anio="2001" data-duracion="1h 30m" data-imdb="7.9"
+      data-generos="Animación, Comedia, Aventura"
+      data-descripcion="Un ogro gruñón emprende una misión para rescatar a una princesa, acompañado por un burro muy parlanchín."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-shrek.jpg" alt="Shrek">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Shrek</h3>
+        <p class="genre">Animación / Comedia • 2001</p>
+        <div class="rating">⭐ 7.9</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 119 -->
+    <div class="movie-card"
+      data-title="frozen una aventura congelada" data-category="animacion aventura"
+      data-subtitulo="Frozen" data-anio="2013" data-duracion="1h 42m" data-imdb="7.4"
+      data-generos="Animación, Aventura, Musical"
+      data-descripcion="Una joven se une a un montañés, su reno y un muñeco de nieve para encontrar a su hermana, que ha congelado el reino sin querer."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-frozen-una-aventura-congelada.jpg" alt="Frozen: Una aventura congelada">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Frozen: Una aventura congelada</h3>
+        <p class="genre">Animación / Aventura • 2013</p>
+        <div class="rating">⭐ 7.4</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 120 -->
+    <div class="movie-card"
+      data-title="coco" data-category="animacion aventura"
+      data-subtitulo="Coco" data-anio="2017" data-duracion="1h 45m" data-imdb="8.4"
+      data-generos="Animación, Aventura, Musical"
+      data-descripcion="Un niño que sueña con ser músico viaja al mundo de los muertos para descubrir la historia de su familia."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-coco.jpg" alt="Coco">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Coco</h3>
+        <p class="genre">Animación / Aventura • 2017</p>
+        <div class="rating">⭐ 8.4</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 121 -->
+    <div class="movie-card"
+      data-title="up una aventura de altura" data-category="animacion aventura"
+      data-subtitulo="Up" data-anio="2009" data-duracion="1h 36m" data-imdb="8.3"
+      data-generos="Animación, Aventura, Comedia"
+      data-descripcion="Un anciano ata miles de globos a su casa para cumplir su sueño de viajar, sin saber que un niño explorador va a bordo."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-up-una-aventura-de-altura.jpg" alt="Up: Una aventura de altura">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Up: Una aventura de altura</h3>
+        <p class="genre">Animación / Aventura • 2009</p>
+        <div class="rating">⭐ 8.3</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 122 -->
+    <div class="movie-card"
+      data-title="intensamente" data-category="animacion comedia"
+      data-subtitulo="Inside Out" data-anio="2015" data-duracion="1h 35m" data-imdb="8.1"
+      data-generos="Animación, Comedia, Aventura"
+      data-descripcion="Las emociones que viven en la mente de una niña intentan ayudarla a superar una mudanza a una ciudad nueva."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-intensamente.jpg" alt="Intensamente">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Intensamente</h3>
+        <p class="genre">Animación / Comedia • 2015</p>
+        <div class="rating">⭐ 8.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 123 -->
+    <div class="movie-card"
+      data-title="el viaje de chihiro" data-category="animacion fantasia"
+      data-subtitulo="Spirited Away" data-anio="2001" data-duracion="2h 5m" data-imdb="8.6"
+      data-generos="Animación, Fantasía, Aventura"
+      data-descripcion="Una niña queda atrapada en un mundo de espíritus y debe trabajar en una casa de baños para rescatar a sus padres."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-viaje-de-chihiro.jpg" alt="El viaje de Chihiro">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>El viaje de Chihiro</h3>
+        <p class="genre">Animación / Fantasía • 2001</p>
+        <div class="rating">⭐ 8.6</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 124 -->
+    <div class="movie-card"
+      data-title="mi vecino totoro" data-category="animacion fantasia"
+      data-subtitulo="My Neighbor Totoro" data-anio="1988" data-duracion="1h 26m" data-imdb="8.1"
+      data-generos="Animación, Fantasía, Familia"
+      data-descripcion="Dos hermanas que se mudan al campo hacen amistad con unos espíritus del bosque, entre ellos el gigante Totoro."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-mi-vecino-totoro.jpg" alt="Mi vecino Totoro">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Mi vecino Totoro</h3>
+        <p class="genre">Animación / Fantasía • 1988</p>
+        <div class="rating">⭐ 8.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 125 -->
+    <div class="movie-card"
+      data-title="los increíbles" data-category="animacion accion"
+      data-subtitulo="The Incredibles" data-anio="2004" data-duracion="1h 55m" data-imdb="8.0"
+      data-generos="Animación, Acción, Familia"
+      data-descripcion="Una familia de superhéroes retirados vuelve a la acción para detener a un enemigo que amenaza a la ciudad."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-los-increibles.jpg" alt="Los Increíbles">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Los Increíbles</h3>
+        <p class="genre">Animación / Acción • 2004</p>
+        <div class="rating">⭐ 8.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 126 -->
+    <div class="movie-card"
+      data-title="ratatouille" data-category="animacion comedia"
+      data-subtitulo="Ratatouille" data-anio="2007" data-duracion="1h 51m" data-imdb="8.1"
+      data-generos="Animación, Comedia, Familia"
+      data-descripcion="Una rata con un gran talento para la cocina se alía con un joven aprendiz en un famoso restaurante de París."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-ratatouille.jpg" alt="Ratatouille">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Ratatouille</h3>
+        <p class="genre">Animación / Comedia • 2007</p>
+        <div class="rating">⭐ 8.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 127 -->
+    <div class="movie-card"
+      data-title="walle" data-category="animacion cienciaficcion"
+      data-subtitulo="WALL-E" data-anio="2008" data-duracion="1h 38m" data-imdb="8.4"
+      data-generos="Animación, Ciencia Ficción, Romance"
+      data-descripcion="Un pequeño robot que limpia la Tierra abandonada conoce a una robot exploradora y la sigue a través del espacio."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-wall-e.jpg" alt="WALL-E">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>WALL-E</h3>
+        <p class="genre">Animación / Ciencia Ficción • 2008</p>
+        <div class="rating">⭐ 8.4</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 128 -->
+    <div class="movie-card"
+      data-title="kung fu panda" data-category="animacion accion"
+      data-subtitulo="Kung Fu Panda" data-anio="2008" data-duracion="1h 32m" data-imdb="7.6"
+      data-generos="Animación, Acción, Comedia"
+      data-descripcion="Un panda perezoso y amante de la comida es elegido por sorpresa como el Guerrero Dragón."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-kung-fu-panda.jpg" alt="Kung Fu Panda">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Kung Fu Panda</h3>
+        <p class="genre">Animación / Acción • 2008</p>
+        <div class="rating">⭐ 7.6</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 129 -->
+    <div class="movie-card"
+      data-title="moana un mar de aventuras" data-category="animacion aventura"
+      data-subtitulo="Moana" data-anio="2016" data-duracion="1h 47m" data-imdb="7.6"
+      data-generos="Animación, Aventura, Musical"
+      data-descripcion="Una joven navegante cruza el océano junto al semidiós Maui para salvar a su isla y devolver el corazón de una diosa."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-moana-un-mar-de-aventuras.jpg" alt="Moana: Un mar de aventuras">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Moana: Un mar de aventuras</h3>
+        <p class="genre">Animación / Aventura • 2016</p>
+        <div class="rating">⭐ 7.6</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 130 -->
+    <div class="movie-card"
+      data-title="cómo entrenar a tu dragón" data-category="animacion aventura"
+      data-subtitulo="How to Train Your Dragon" data-anio="2010" data-duracion="1h 38m" data-imdb="8.1"
+      data-generos="Animación, Aventura, Fantasía"
+      data-descripcion="Un joven vikingo que debía cazar dragones se hace amigo de uno de ellos y cambia para siempre la vida de su aldea."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-como-entrenar-a-tu-dragon.jpg" alt="Cómo entrenar a tu dragón">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Cómo entrenar a tu dragón</h3>
+        <p class="genre">Animación / Aventura • 2010</p>
+        <div class="rating">⭐ 8.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 131 -->
+    <div class="movie-card"
+      data-title="encanto" data-category="animacion comedia"
+      data-subtitulo="Encanto" data-anio="2021" data-duracion="1h 42m" data-imdb="7.2"
+      data-generos="Animación, Comedia, Musical"
+      data-descripcion="En una casa mágica de Colombia, una joven es la única de su familia que no ha recibido un don especial."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-encanto.jpg" alt="Encanto">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Encanto</h3>
+        <p class="genre">Animación / Comedia • 2021</p>
+        <div class="rating">⭐ 7.2</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 132 -->
+    <div class="movie-card"
+      data-title="aladdín" data-category="animacion aventura"
+      data-subtitulo="Aladdin" data-anio="1992" data-duracion="1h 30m" data-imdb="8.0"
+      data-generos="Animación, Aventura, Musical"
+      data-descripcion="Un joven ladrón encuentra una lámpara mágica con un genio dentro y se hace pasar por príncipe para conquistar a Jazmín."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-aladdin.jpg" alt="Aladdín">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Aladdín</h3>
+        <p class="genre">Animación / Aventura • 1992</p>
+        <div class="rating">⭐ 8.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 133 -->
+    <div class="movie-card"
+      data-title="la bella y la bestia" data-category="animacion romance"
+      data-subtitulo="Beauty and the Beast" data-anio="1991" data-duracion="1h 24m" data-imdb="8.0"
+      data-generos="Animación, Romance, Musical"
+      data-descripcion="Una joven se queda prisionera en el castillo de una bestia y descubre que detrás de su aspecto hay un buen corazón."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-la-bella-y-la-bestia.jpg" alt="La Bella y la Bestia">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>La Bella y la Bestia</h3>
+        <p class="genre">Animación / Romance • 1991</p>
+        <div class="rating">⭐ 8.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 134 -->
+    <div class="movie-card"
+      data-title="zootrópolis" data-category="animacion aventura"
+      data-subtitulo="Zootopia" data-anio="2016" data-duracion="1h 48m" data-imdb="8.0"
+      data-generos="Animación, Aventura, Comedia"
+      data-descripcion="Una coneja policía y un zorro astuto investigan una conspiración en una ciudad habitada solo por animales."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-zootropolis.jpg" alt="Zootrópolis">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Zootrópolis</h3>
+        <p class="genre">Animación / Aventura • 2016</p>
+        <div class="rating">⭐ 8.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 135 -->
+    <div class="movie-card"
+      data-title="el padrino" data-category="drama"
+      data-subtitulo="The Godfather" data-anio="1972" data-duracion="2h 55m" data-imdb="9.2"
+      data-generos="Drama, Crimen"
+      data-descripcion="El patriarca de una poderosa familia mafiosa entrega el control a su hijo menor, quien se ve arrastrado al negocio familiar."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-padrino.jpg" alt="El padrino">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>El padrino</h3>
+        <p class="genre">Drama / Crimen • 1972</p>
+        <div class="rating">⭐ 9.2</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 136 -->
+    <div class="movie-card"
+      data-title="forrest gump" data-category="drama"
+      data-subtitulo="Forrest Gump" data-anio="1994" data-duracion="2h 22m" data-imdb="8.8"
+      data-generos="Drama, Romance"
+      data-descripcion="Un hombre de gran corazón y pocas luces vive, sin proponérselo, algunos de los momentos más importantes de la historia de su país."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-forrest-gump.jpg" alt="Forrest Gump">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Forrest Gump</h3>
+        <p class="genre">Drama / Romance • 1994</p>
+        <div class="rating">⭐ 8.8</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 137 -->
+    <div class="movie-card"
+      data-title="cadena perpetua" data-category="drama"
+      data-subtitulo="The Shawshank Redemption" data-anio="1994" data-duracion="2h 22m" data-imdb="9.3"
+      data-generos="Drama"
+      data-descripcion="Un banquero condenado injustamente forma una amistad en prisión y mantiene viva la esperanza durante décadas."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-cadena-perpetua.jpg" alt="Cadena perpetua">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Cadena perpetua</h3>
+        <p class="genre">Drama • 1994</p>
+        <div class="rating">⭐ 9.3</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 138 -->
+    <div class="movie-card"
+      data-title="la lista de schindler" data-category="drama"
+      data-subtitulo="Schindler's List" data-anio="1993" data-duracion="3h 15m" data-imdb="9.0"
+      data-generos="Drama, Historia, Bélica"
+      data-descripcion="Un empresario alemán salva la vida de más de mil judíos empleándolos en su fábrica durante la Segunda Guerra Mundial."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-la-lista-de-schindler.jpg" alt="La lista de Schindler">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>La lista de Schindler</h3>
+        <p class="genre">Drama / Historia • 1993</p>
+        <div class="rating">⭐ 9.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 139 -->
+    <div class="movie-card"
+      data-title="el club de la pelea" data-category="drama"
+      data-subtitulo="Fight Club" data-anio="1999" data-duracion="2h 19m" data-imdb="8.8"
+      data-generos="Drama, Suspenso"
+      data-descripcion="Un oficinista insomne conoce a un vendedor de jabones carismático y juntos fundan un club clandestino de peleas."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-club-de-la-pelea.jpg" alt="El club de la pelea">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>El club de la pelea</h3>
+        <p class="genre">Drama / Suspenso • 1999</p>
+        <div class="rating">⭐ 8.8</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 140 -->
+    <div class="movie-card"
+      data-title="una mente brillante" data-category="drama"
+      data-subtitulo="A Beautiful Mind" data-anio="2001" data-duracion="2h 15m" data-imdb="8.2"
+      data-generos="Drama, Biografía"
+      data-descripcion="La vida del matemático John Nash, un genio que enfrenta una enfermedad mental mientras persigue sus ideas."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-una-mente-brillante.jpg" alt="Una mente brillante">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Una mente brillante</h3>
+        <p class="genre">Drama / Biografía • 2001</p>
+        <div class="rating">⭐ 8.2</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 141 -->
+    <div class="movie-card"
+      data-title="la milla verde" data-category="drama"
+      data-subtitulo="The Green Mile" data-anio="1999" data-duracion="3h 9m" data-imdb="8.6"
+      data-generos="Drama, Fantasía"
+      data-descripcion="Un guardia de una prisión conoce a un condenado a muerte con un don extraordinario que cambia a todos a su alrededor."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-la-milla-verde.jpg" alt="La milla verde">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>La milla verde</h3>
+        <p class="genre">Drama / Fantasía • 1999</p>
+        <div class="rating">⭐ 8.6</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 142 -->
+    <div class="movie-card"
+      data-title="el pianista" data-category="drama"
+      data-subtitulo="The Pianist" data-anio="2002" data-duracion="2h 30m" data-imdb="8.5"
+      data-generos="Drama, Biografía, Bélica"
+      data-descripcion="Un pianista judío polaco lucha por sobrevivir a la ocupación nazi de Varsovia."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-pianista.jpg" alt="El pianista">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>El pianista</h3>
+        <p class="genre">Drama / Biografía • 2002</p>
+        <div class="rating">⭐ 8.5</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 143 -->
+    <div class="movie-card"
+      data-title="parásitos" data-category="drama"
+      data-subtitulo="Parasite" data-anio="2019" data-duracion="2h 12m" data-imdb="8.5"
+      data-generos="Drama, Suspenso, Comedia"
+      data-descripcion="Una familia pobre se infiltra poco a poco en la vida de una familia adinerada, con consecuencias inesperadas."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-parasitos.jpg" alt="Parásitos">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Parásitos</h3>
+        <p class="genre">Drama / Suspenso • 2019</p>
+        <div class="rating">⭐ 8.5</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 144 -->
+    <div class="movie-card"
+      data-title="el lobo de wall street" data-category="drama"
+      data-subtitulo="The Wolf of Wall Street" data-anio="2013" data-duracion="3h 0m" data-imdb="8.2"
+      data-generos="Drama, Biografía, Comedia"
+      data-descripcion="El ascenso y la caída de un corredor de bolsa que construyó una fortuna a base de fraude, excesos y ambición."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-lobo-de-wall-street.jpg" alt="El lobo de Wall Street">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>El lobo de Wall Street</h3>
+        <p class="genre">Drama / Biografía • 2013</p>
+        <div class="rating">⭐ 8.2</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 145 -->
+    <div class="movie-card"
+      data-title="joker" data-category="drama"
+      data-subtitulo="Joker" data-anio="2019" data-duracion="2h 2m" data-imdb="8.4"
+      data-generos="Drama, Crimen, Suspenso"
+      data-descripcion="Un comediante fracasado que vive al margen de Ciudad Gótica se va hundiendo en la locura hasta convertirse en un símbolo del caos."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-joker.jpg" alt="Joker">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Joker</h3>
+        <p class="genre">Drama / Crimen • 2019</p>
+        <div class="rating">⭐ 8.4</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 146 -->
+    <div class="movie-card"
+      data-title="whiplash" data-category="drama"
+      data-subtitulo="Whiplash" data-anio="2014" data-duracion="1h 47m" data-imdb="8.5"
+      data-generos="Drama, Música"
+      data-descripcion="Un joven baterista entra a un conservatorio de élite y choca con un profesor tan brillante como despiadado."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-whiplash.jpg" alt="Whiplash">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Whiplash</h3>
+        <p class="genre">Drama / Música • 2014</p>
+        <div class="rating">⭐ 8.5</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 147 -->
+    <div class="movie-card"
+      data-title="en busca del destino" data-category="drama"
+      data-subtitulo="Good Will Hunting" data-anio="1997" data-duracion="2h 6m" data-imdb="8.3"
+      data-generos="Drama, Romance"
+      data-descripcion="Un joven conserje con un talento matemático extraordinario aprende a enfrentar su pasado con ayuda de un terapeuta."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-en-busca-del-destino.jpg" alt="En busca del destino">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>En busca del destino</h3>
+        <p class="genre">Drama / Romance • 1997</p>
+        <div class="rating">⭐ 8.3</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 148 -->
+    <div class="movie-card"
+      data-title="rocky" data-category="drama"
+      data-subtitulo="Rocky" data-anio="1976" data-duracion="2h 0m" data-imdb="8.1"
+      data-generos="Drama, Deporte"
+      data-descripcion="Un modesto boxeador de Filadelfia recibe la oportunidad de pelear por el título mundial de los pesos pesados."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-rocky.jpg" alt="Rocky">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Rocky</h3>
+        <p class="genre">Drama / Deporte • 1976</p>
+        <div class="rating">⭐ 8.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 149 -->
+    <div class="movie-card"
+      data-title="seven los siete pecados capitales" data-category="drama"
+      data-subtitulo="Se7en" data-anio="1995" data-duracion="2h 7m" data-imdb="8.6"
+      data-generos="Drama, Crimen, Misterio"
+      data-descripcion="Dos detectives persiguen a un asesino en serie que basa sus crímenes en los siete pecados capitales."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-seven-los-siete-pecados-capitales.jpg" alt="Seven: Los siete pecados capitales">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>Seven: Los siete pecados capitales</h3>
+        <p class="genre">Drama / Crimen • 1995</p>
+        <div class="rating">⭐ 8.6</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 150 -->
+    <div class="movie-card"
+      data-title="la vida es bella" data-category="drama"
+      data-subtitulo="Life Is Beautiful" data-anio="1997" data-duracion="1h 56m" data-imdb="8.6"
+      data-generos="Drama, Comedia, Bélica"
+      data-descripcion="Un padre usa la imaginación y el humor para proteger a su hijo del horror de un campo de concentración."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-la-vida-es-bella.jpg" alt="La vida es bella">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>La vida es bella</h3>
+        <p class="genre">Drama / Comedia • 1997</p>
+        <div class="rating">⭐ 8.6</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 151 -->
+    <div class="movie-card"
+      data-title="el discurso del rey" data-category="drama"
+      data-subtitulo="The King's Speech" data-anio="2010" data-duracion="1h 58m" data-imdb="8.0"
+      data-generos="Drama, Biografía, Historia"
+      data-descripcion="El futuro rey de Inglaterra trabaja con un terapeuta poco convencional para superar su tartamudez."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-discurso-del-rey.jpg" alt="El discurso del rey">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>El discurso del rey</h3>
+        <p class="genre">Drama / Biografía • 2010</p>
+        <div class="rating">⭐ 8.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 152 -->
+    <div class="movie-card"
+      data-title="oppenheimer" data-category="drama"
+      data-subtitulo="Oppenheimer" data-anio="2023" data-duracion="3h 0m" data-imdb="8.3"
+      data-generos="Drama, Biografía, Historia"
+      data-descripcion="La historia del físico J. Robert Oppenheimer y su papel en el desarrollo de la bomba atómica durante la Segunda Guerra Mundial."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-oppenheimer.jpg" alt="Oppenheimer">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>Oppenheimer</h3>
+        <p class="genre">Drama / Biografía • 2023</p>
+        <div class="rating">⭐ 8.3</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 153 -->
+    <div class="movie-card"
+      data-title="el renacido" data-category="drama"
+      data-subtitulo="The Revenant" data-anio="2015" data-duracion="2h 36m" data-imdb="8.0"
+      data-generos="Drama, Aventura, Acción"
+      data-descripcion="Un cazador abandonado a su suerte en la naturaleza salvaje emprende un viaje desesperado para sobrevivir y vengarse."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-1/poster-el-renacido.jpg" alt="El renacido">
+        <span class="badge">4K</span>
+      </div>
+      <div class="movie-info">
+        <h3>El renacido</h3>
+        <p class="genre">Drama / Aventura • 2015</p>
+        <div class="rating">⭐ 8.0</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 154 -->
+    <div class="movie-card"
+      data-title="la sociedad de los poetas muertos" data-category="drama"
+      data-subtitulo="Dead Poets Society" data-anio="1989" data-duracion="2h 8m" data-imdb="8.1"
+      data-generos="Drama"
+      data-descripcion="Un profesor poco convencional inspira a sus alumnos de un colegio estricto a pensar por sí mismos y vivir con pasión."
+      data-vimeo="">
+      <div class="poster-wrapper">
+        <img src="../images/parte-2/poster-la-sociedad-de-los-poetas-muertos.jpg" alt="La sociedad de los poetas muertos">
+        <span class="badge">HD</span>
+      </div>
+      <div class="movie-info">
+        <h3>La sociedad de los poetas muertos</h3>
+        <p class="genre">Drama • 1989</p>
+        <div class="rating">⭐ 8.1</div>
+        <!-- Enlace con href -->
+        <a href="usuario.html" class="btn-watch" target="_blank">Ver ahora</a>
+      </div>
+    </div>
+
+    <p id="sin-resultados" class="sin-resultados" style="display:none;">No se encontraron películas con ese filtro.</p>
+  </div>
+</div>
+
+<footer class="pie-pagina">
+  <p>PeliSpacio • Tu espacio de cine digital • &copy; 2026</p>
+</footer>
+
+<script src="../scripts/script.js"></script>
+<script src="../scripts/menu.js"></script>
+</body>
+</html>
